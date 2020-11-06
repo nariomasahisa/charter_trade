@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+.top-page-header {
+  background-color: lightgreen ;
+  height: 10vh;
+}
+
+.app-name {
+  font-size: 20px;
+  font-family: 'Bangers', cursive;
+}
+
+
+.header-menu {
+
+}
+
+.menu-lists {
+}
+
+.sign_in_up_lists {
+  display: flex;
+  justify-content: left;
+  padding-right: 10px;
+}
+
+.new-charter, .log-in, .sign-up, .log-out, .log-in-user {
+  font-size: 15px;
+  padding: 0 15px;
+}

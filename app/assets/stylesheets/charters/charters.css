@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+}
+/* ーーーーーーーー左側のページーーーーーーーーー */
+.charter_bar {
+  width: 70vw;
+  height: 80vh;
+  background-color: snow;
+}
+.charter_header {
+  height: 50px;
+  background-color: burlywood;
+}
+.charter_main {
+
+  height: calc(80vh-50px);
+  overflow: scroll;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.charter_lists {
+  width: 33%;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.charter_name a{
+
+}
+
+/* ーーーーーーーー左側のページーーーーーーーーー */
+
+
+/* ーーーーーーーー右側のページーーーーーーーーー */
+.price_bar {
+  width: 30vw;
+  height: 80vh;
+  background-color: skyblue;
+  align-items: center;
+}
+.price_header {
+  height: calc(80vh -50px);
+}
+.price_main {
+  height: calc(80vh - 50px - 50px);
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  overflow: scroll;
+
+}
+.price_lists {
+  padding: 20;
+  margin: 0 auto;
+}
+.price {
+  font-size: 15px;
+  padding: 10px;
+}
+.price_post {
+  height: 50px;
+  padding: 5px 10px;
+  display: flex;
+}
+.form-input {
+  background-color: white;
+  width: 100%;
+}
+.form-message {
+  border: none;
+  height: 20px;
+  width: 100%;
+  
+}
+.form-submit {
+  background-color: coral;
+  border: none;
+  color: black;
+}
+
+/* ーーーーーーーー右側のページーーーーーーーーー */
