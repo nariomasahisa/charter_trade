@@ -51,15 +51,15 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :"都道府県"%>
+            <%= f.label :prefecture_address, "都道府県"%>
           </div>
           <div class='field-input'>
-            <%= f.text_field :prefecuture_address, autofocus: true%>
+            <%= f.text_field :prefecture_address, autofocus: true%>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :"市区町村"%>
+            <%= f.label :city_address, "市区町村"%>
           </div>
           <div class='field-input'>
             <%= f.text_field :city_address, autofocus: true%>
@@ -67,7 +67,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :"番地までの住所"%>
+            <%= f.label :house_number, "番地までの住所"%>
           </div>
           <div class='field-input'>
             <%= f.text_field :house_number, autofocus: true%>

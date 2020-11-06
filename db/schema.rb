@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_11_06_093423) do
     t.string "username", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.integer "phone_number", null: false
+    t.string "phone_number", null: false
     t.string "prefecture_address", null: false
     t.string "city_address", null: false
     t.string "house_number", null: false
