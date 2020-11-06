@@ -8,7 +8,7 @@
 /* ーーーーーーーー左側のページーーーーーーーーー */
 .charter_bar {
   width: 70vw;
-  height: 100vh;
+  height: 80vh;
   background-color: snow;
 }
 .charter_header {
@@ -17,9 +17,8 @@
 }
 .charter_main {
 
-  height: calc(100% - 100px);
+  height: calc(80vh-50px);
   overflow: scroll;
-  padding: 20px;
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
@@ -41,15 +40,15 @@
 /* ーーーーーーーー右側のページーーーーーーーーー */
 .price_bar {
   width: 30vw;
-  height: 100vh;
+  height: 80vh;
   background-color: skyblue;
   align-items: center;
 }
 .price_header {
-  height: 50px;
+  height: calc(80vh -50px);
 }
 .price_main {
-  height: calc(100vh - 50px - 50px);
+  height: calc(80vh - 50px - 50px);
   display: flex;
   flex-direction: column;
   margin-top: 20px;

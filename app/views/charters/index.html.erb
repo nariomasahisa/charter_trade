@@ -2,39 +2,11 @@
 
 <div class='wrapper'>
 <%# 左ページ %>
-  <div class='charter_bar'>
-    <div class="charter_header">
-    チャーター便一覧
-    </div>
-    <div class="charter_main">
-      <div class="charter_lists">
-        <div class='charter-name'>
-          <a href='#'>東京都新宿区→大阪府大阪市</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= render "charters_bar" %>
   
 <%# 右ページ %>
-  <div class='price_bar'>
-    <div class="price_header">
-      東京都新宿区→大阪府大阪市
-    </div>
-    <div class="price_main">
-      <div class="price_lists">
-        <div class="price">
-          <a href="#">500000</a>
-        </div>
-      </div>
-
-    </div>
-    <div class="price_post">
-      <div class="form-input">
-        <input class="form-message" placeholder= "価格を入力してください">
-      </div>
-      <input class="form-submit" type="submit" value="送信">
-    </div>
-  </div>
+  <%= render "price_bar" %>
+  
 </div>
 
 <%= render "shared/footer" %>

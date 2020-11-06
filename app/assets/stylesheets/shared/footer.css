@@ -1,8 +1,6 @@
-* {
-  box-sizing: border-box;
-}
+
 footer {
-  height: 40px;
+  height: 10vh;
   background-color: lightgreen;
 }
 .copy-light {
