@@ -9,10 +9,10 @@
         <%= devise_error_messages!%>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :name%>
+            <%= f.label :username%>
           </div>
           <div class='field-input'>
-            <%= f.text_field :name, autofocus: true%>
+            <%= f.text_field :username, autofocus: true%>
           </div>
         </div>
         <div class='field'>
@@ -40,6 +40,40 @@
             <%= f.password_field :password_confirmation, autocomplete: "off"%>
           </div>
         </div>
+
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :電話番号%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :phone_number, autofocus: true%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :"都道府県"%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :prefecuture_address, autofocus: true%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :"市区町村"%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :city_address, autofocus: true%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :"番地までの住所"%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :house_number, autofocus: true%>
+          </div>
+        </div>
+
         <div class='actions'>
           <%= f.submit "Create Account", class: 'btn'%>
         </div>
