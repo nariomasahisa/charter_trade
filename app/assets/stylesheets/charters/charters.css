@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+}
+/* ーーーーーーーー左側のページーーーーーーーーー */
+.charter_bar {
+  width: 70vw;
+  height: 100vh;
+  background-color: snow;
+}
+.charter_header {
+  height: 100px;
+  background-color: burlywood;
+}
+.charter_main {
+  background-color: snow;
+  height: calc(100vh - 100px);
+  overflow: scroll;
+  padding: 20px;
+}
+
+.charter_lists {
+  padding: 20px;
+}
+
+.charter_name a{
+}
+
+/* ーーーーーーーー左側のページーーーーーーーーー */
+
+
+/* ーーーーーーーー右側のページーーーーーーーーー */
+.price_bar {
+  width: 30vw;
+  background-color: skyblue;
+}
+.price_header {
+  height: 100px;
+}
+.price_main {
+  height: calc(100vh - 100px 90px);
+}
+.price_post {
+  height: 90px;
+}
+/* ーーーーーーーー右側のページーーーーーーーーー */
