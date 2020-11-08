@@ -69,7 +69,9 @@
 | password           | string     | null :false      |
 | encrypted_password | string     | null :false      |
 | phone_number       | integer    | null :false      |
-| address            | string     | null :false      |
+| prefecture_address | string     | null :false      |
+| city_address       | string     | null :false      |
+| house_number       | string     | null :false      |
 
 #### アソシエーション
 user has_many :orders   
