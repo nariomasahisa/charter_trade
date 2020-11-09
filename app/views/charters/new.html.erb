@@ -44,7 +44,7 @@
     <div class='chat-room-form__field'>
     <%# 都道府県をActiveHashにする %>
       <div class='chat-room-form__field--left'>
-        <%= f.label :住所, class: 'chat-room-form__label'%>
+        <%= f.label :都道府県, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
         <%= f.text_field :prefecture_id, class: 'chat__room_name chat-room-form__input', placeholder: '東京都'%>
@@ -52,7 +52,7 @@
     </div>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
-        <%= f.label :"", class: 'chat-room-form__label'%>
+        <%= f.label :市区町村, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
         <%= f.text_field :city, class: 'chat__room_name chat-room-form__input', placeholder: '千代田区'%>
@@ -60,7 +60,7 @@
     </div>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
-        <%= f.label :"", class: 'chat-room-form__label'%>
+        <%= f.label :番地, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
         <%= f.text_field :charter_address, class: 'chat__room_name chat-room-form__input', placeholder: '1-1'%>
@@ -68,7 +68,7 @@
     </div>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
-        <%= f.label :"", class: 'chat-room-form__label'%>
+        <%= f.label :建物名, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
         <%= f.text_field :build_name, class: 'chat__room_name chat-room-form__input', placeholder: '〇〇ビル〇〇'%>
