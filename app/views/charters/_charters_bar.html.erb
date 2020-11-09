@@ -4,11 +4,11 @@
     </div>
     <div class="charter_main">
       <div class="charter_lists">
-        <%# <% @items.each do |item| %>
+        <% @charters.each do |charter| %>
           <div class='charter-name'>
-            <a href='#'>東京都新宿区→大阪府大阪市</a>
+            <a href='#'><%= "#{charter.departure}→#{charter.arrive}" %></a>
           </div>
-        <%# <% end %>
+        <% end %>
         
       </div>
     </div>
