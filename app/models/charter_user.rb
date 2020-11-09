@@ -1,0 +1,2 @@
+class CharterUser < ApplicationRecord
+end

@@ -7,6 +7,7 @@ class CreateCharters < ActiveRecord::Migration[6.0]
       t.date    :delivery_date,   null: false
       t.integer :buy_price,       null: false
       t.integer :prefecture_id,   null: false
+      t.string  :city,            null: false
       t.string  :charter_address, null: false
       t.string  :build_name,      null: false
       t.integer :tell_number,     null: false
