@@ -22,8 +22,7 @@ class User < ApplicationRecord
   validates :phone_number, format: { with: /\A\d{10,11}\z/ }
 
   # アソシエーション
-  has_many :charter_users
-  has_many :charters, through: :charter_users
+  has_many :charters
   has_many :sellOrders
   has_many :orders
 end

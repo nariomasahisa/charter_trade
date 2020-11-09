@@ -5,9 +5,10 @@
     <div class="charter_main">
       <div class="charter_lists">
         <% @charters.each do |charter| %>
-          <div class='charter-name'>
-            <a href='#'><%= "#{charter.departure}→#{charter.arrive}" %></a>
-          </div>
+          <%# <div class='charter-name'> %>
+            <%= link_to "#{charter.departure}→#{charter.arrive}", charter_path(charter),class:'charter-name'%>
+
+          <%# </div> %>
         <% end %>
         
       </div>

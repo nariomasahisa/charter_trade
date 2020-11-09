@@ -1,2 +1,0 @@
-class CharterUser < ApplicationRecord
-end
