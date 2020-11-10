@@ -6,12 +6,9 @@ class ChartersController < ApplicationController
     @charter = Charter.new
   end
 
-  def show
-    @charter = Charter.find(params[:id])  
-  end
-
   def create
     @charter = Charter.create(charter_params)
+    binding.pry
     if @charter.save
       redirect_to root_path
     else
