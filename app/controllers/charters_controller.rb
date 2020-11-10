@@ -19,6 +19,18 @@ class ChartersController < ApplicationController
     end
   end
 
+  def edit
+    @charter = Charter.find(params[:id])
+  end
+
+  def update
+    @charter = Charter.find(params[:id])
+    if @charter.update(charter_params)
+      redirect_to  charter_path(@charter)
+    else
+      render :edit
+    end
+  end
 
   private
   def charter_params
