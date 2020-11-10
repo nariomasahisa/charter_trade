@@ -1,0 +1,57 @@
+<<<<<<< HEAD
+
+<h1>チャーター便詳細</h1>
+<div class="charter-show-left">
+  <div class="charter-details">
+    <div class="charter-departure-arrive">
+      <%= "#{@charter.departure}→#{@charter.arrive}" %>
+    </div>
+
+
+    <div class="charter-buy-price">
+      <div class="charter-buy-price-value">
+      発注者希望価格
+      </div>
+      <div class="charter-buy-price-value">
+        <%= "#{@charter.buy_price}円"%>
+      </div>
+    </div>
+    <div class="charter-address">
+      <div class="charter-address-value">
+      発送先住所
+      </div>
+      <div class="charter-address-value">
+        <%= "#{@charter.prefecture_id}#{@charter.city}#{@charter.charter_address}#{@charter.build_name}"%>
+      </div>
+    </div>
+    <div class="charter-size">
+      <div class="charter-address-value">
+      チャーター便才数
+      </div>
+      <div class="charter-address-value">
+        <%= "#{@charter.size}才"%>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class= "charter-images">
+    <div class="charter-arrive-map">
+    </div>
+    <div class="charter-edit">
+    <%= link_to "編集する", edit_charter_path(@charter) %>
+    </div>
+    <div class="charter-delete">
+    </div>
+    <div class="charter-parchase">
+    </div>
+  </div>
+</div>
+
+<div class="charter-show-right">
+  <div class="charter-show-prices">
+    <div class="charter-show-price-list">
+  </div>
+</div>
+=======
+>>>>>>> parent of f759771... チャーター詳細ページ作成

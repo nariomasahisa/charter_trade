@@ -4,9 +4,13 @@
     </div>
     <div class="charter_main">
       <div class="charter_lists">
-        <div class='charter-name'>
-          <a href='#'>東京都新宿区→大阪府大阪市</a>
-        </div>
+        <% @charters.each do |charter| %>
+          <%# <div class='charter-name'> %>
+            <%= link_to "#{charter.departure}→#{charter.arrive}", charter_path(charter),class:'charter-name'%>
+
+          <%# </div> %>
+        <% end %>
+        
       </div>
     </div>
   </div>

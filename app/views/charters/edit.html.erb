@@ -1,0 +1,93 @@
+<div class='chat-room-form'>
+  <h1>チャーター便発注</h1>
+  <%=form_with model: @charter, local: true do |f|%>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :出発地, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :departure, class: 'chat__room_name chat-room-form__input', placeholder: '出発地を入力してください'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :到着地, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :arrive, class: 'chat__room_name chat-room-form__input', placeholder: '到着地を入力してください'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :才数, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :size, class: 'chat__room_name chat-room-form__input', placeholder: '才数'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :到着希望日, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :delivery_date, class: 'chat__room_name chat-room-form__input', placeholder: '2020-01-01'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :希望価格, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :buy_price, class: 'chat__room_name chat-room-form__input', placeholder: '50000'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+    <%# 都道府県をActiveHashにする %>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :都道府県, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :prefecture_id, class: 'chat__room_name chat-room-form__input', placeholder: '東京都'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :市区町村, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :city, class: 'chat__room_name chat-room-form__input', placeholder: '千代田区'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :番地, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :charter_address, class: 'chat__room_name chat-room-form__input', placeholder: '1-1'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :建物名, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :build_name, class: 'chat__room_name chat-room-form__input', placeholder: '〇〇ビル〇〇'%>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :電話番号, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :tell_number, class: 'chat__room_name chat-room-form__input', placeholder: '09012345678'%>
+      </div>
+    </div>
+
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'></div>
+      <div class='chat-room-form__field--right'>
+        <%= f.submit "チャーターの発注", class: 'chat-room-form__action-btn' %>
+      </div>
+    </div>
+  <% end %>
+</div>

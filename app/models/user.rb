@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
+  # バリデーション
   with_options presence: true do
     validates :username
     validates :email
@@ -19,4 +20,10 @@ class User < ApplicationRecord
     format: { with: /\A[a-zA-Z0-9]+\z/ },
     length: { minimum: 8 }
   validates :phone_number, format: { with: /\A\d{10,11}\z/ }
+
+  # アソシエーション
+  has_many :charters
+  has_many :sellOrders
+  has_many :orders
 end
+
