@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: charter_trade_production
-  username: charter_trade
-  password: <%= ENV['CHARTER_TRADE_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  soket: /var/lib/mysql/mysql.sock
