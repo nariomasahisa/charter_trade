@@ -8,7 +8,7 @@ class ChartersController < ApplicationController
 
   def create
     @charter = Charter.create(charter_params)
-    binding.pry
+    
     if @charter.save
       redirect_to root_path
     else
