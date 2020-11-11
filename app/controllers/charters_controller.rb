@@ -1,4 +1,6 @@
 class ChartersController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @charters = Charter.all
   end
@@ -16,6 +18,9 @@ class ChartersController < ApplicationController
     end
   end
 
+  def show
+    @charter = Charter.find(params[:id])
+  end
   def edit
     @charter = Charter.find(params[:id])
   end
@@ -26,6 +31,13 @@ class ChartersController < ApplicationController
       redirect_to  charter_path(@charter)
     else
       render :edit
+    end
+  end
+
+  def destroy
+    @charter = Charter.find(params[:id])
+    if @charter.destroy
+      redirect_to root_path
     end
   end
 
