@@ -1,6 +1,7 @@
 class ChartersController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-
+  before_action :set_charter, only: [:show, :edit, :update, :destroy]
+  
   def index
     @charters = Charter.all
   end
@@ -10,7 +11,6 @@ class ChartersController < ApplicationController
 
   def create
     @charter = Charter.create(charter_params)
-    
     if @charter.save
       redirect_to root_path
     else
@@ -19,14 +19,14 @@ class ChartersController < ApplicationController
   end
 
   def show
-    @charter = Charter.find(params[:id])
+    @sell = Sell.new
+    @sells = @charter.sells
   end
-  def edit
-    @charter = Charter.find(params[:id])
+  
+  def edit  
   end
 
   def update
-    @charter = Charter.find(params[:id])
     if @charter.update(charter_params)
       redirect_to  charter_path(@charter)
     else
@@ -35,7 +35,6 @@ class ChartersController < ApplicationController
   end
 
   def destroy
-    @charter = Charter.find(params[:id])
     if @charter.destroy
       redirect_to root_path
     end
@@ -44,5 +43,9 @@ class ChartersController < ApplicationController
   private
   def charter_params
     params.require(:charter).permit(:departure, :arrive, :size, :delivery_date, :buy_price, :prefecture_id, :city, :charter_address, :build_name, :tell_number).merge(user_id: current_user.id)
+  end
+
+  def set_charter
+    @charter = Charter.find(params[:id])
   end
 end
