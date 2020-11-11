@@ -23,7 +23,7 @@ class User < ApplicationRecord
 
   # アソシエーション
   has_many :charters
-  has_many :sellOrders
+  has_many :sells
   has_many :orders
 end
 
