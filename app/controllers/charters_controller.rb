@@ -16,6 +16,9 @@ class ChartersController < ApplicationController
     end
   end
 
+  def show
+    @charter = Charter.find(params[:id])
+  end
   def edit
     @charter = Charter.find(params[:id])
   end
