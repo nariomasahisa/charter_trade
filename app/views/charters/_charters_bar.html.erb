@@ -5,12 +5,11 @@
     <div class="charter_main">
       <div class="charter_lists">
         <% @charters.each do |charter| %>
-          <%# <div class='charter-name'> %>
+          <div class='charter-name'>
             <%= link_to "#{charter.departure}→#{charter.arrive}", charter_path(charter),class:'charter-name'%>
-
-          <%# </div> %>
-        <% end %>
-        
+          </div>
+          <%= link_to "発注者:#{charter.user.username}", user_path(charter),  class: "name-link" %>
+        <% end %> 
       </div>
     </div>
   </div>

@@ -49,7 +49,7 @@
   <ul class="price-row">  
     <% @sells.each do |sell|%>
       <li class="price-lists">
-        <%= link_to "#{sell.sell}円", "#", id: "price", class: "price-list" %>
+        <%= link_to "#{sell.sell}円", "/users/#{sell.user_id}", id: "price", class: "price-list" %>
       </li>
     <% end %>
   </ul>
