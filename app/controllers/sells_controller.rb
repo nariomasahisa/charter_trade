@@ -13,6 +13,14 @@ class SellsController < ApplicationController
     end
   end
 
+  def destroy
+    @sell = Sell.find(params[:id])
+    charter = Charter.find(params[:charter_id])
+    if @sell.destroy
+      redirect_to "/charters/#{charter.id}"
+    end
+  end
+
   private
   def sell_params
     params.require(:sell).permit(:sell).merge(user_id: current_user.id, charter_id: params[:charter_id])

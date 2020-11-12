@@ -50,6 +50,7 @@
     <% @sells.each do |sell|%>
       <li class="price-lists">
         <%= link_to "#{sell.sell}円", "/users/#{sell.user_id}", id: "price", class: "price-list" %>
+        <%= link_to "削除", "/charters/#{@charter.id}/sells/#{sell.id}", method: :delete %>
       </li>
     <% end %>
   </ul>
