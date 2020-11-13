@@ -15,6 +15,6 @@ class Charter < ApplicationRecord
   
   # アソシエーション
   belongs_to :user
-  has_many :sells
-  has_one  :purchase
+  has_many :sells, dependent: :destroy
+  has_one  :purchase, dependent: :destroy
 end
