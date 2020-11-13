@@ -1,7 +1,4 @@
 class SellsController < ApplicationController  
-  def index
-    @sells = Sell.all.order("sell asc")
-  end
   def create
     @sell = Sell.create(sell_params)
     if @sell.save
