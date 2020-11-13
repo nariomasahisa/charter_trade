@@ -1,5 +1,4 @@
 class Sell < ApplicationRecord
-  default_scope -> { order(sell: :asc)}
   # バリデーション
   
   # アソシエーション

@@ -20,7 +20,7 @@ class ChartersController < ApplicationController
 
   def show
     @sell = Sell.new
-    @sells = @charter.sells
+    @sells = Sell.order(sell: :asc) #.first(1)
   end
   
   def edit  

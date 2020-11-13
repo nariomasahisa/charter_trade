@@ -1,0 +1,12 @@
+<div class="purchase-content">
+<%# 購入内容の表示 %>
+
+<%# 支払額の表示 %>
+<%# チャーター便手配先業者の表示 %>
+<%# 購入ボタン %>
+  <%= form_with(model: [@charter, @purchase],url: charter_purchases_path, id: 'charge-form', class: 'purchase-form-wrap',local: true) do |f| %>
+  <div class='buy-btn'>
+    <%= f.submit "購入" ,class:"buy-red-btn" %>
+  </div>
+  <% end %>
+</div>

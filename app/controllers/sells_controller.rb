@@ -1,7 +1,4 @@
 class SellsController < ApplicationController  
-  def index
-    @sells = Sell.all.order("sell asc")
-  end
   def create
     @sell = Sell.create(sell_params)
     if @sell.save
@@ -10,6 +7,14 @@ class SellsController < ApplicationController
       @charter = @sell.charter
       @sell = @charter.sell
       render "charters/show"
+    end
+  end
+
+  def destroy
+    @sell = Sell.find(params[:id])
+    charter = Charter.find(params[:charter_id])
+    if @sell.destroy
+      redirect_to "/charters/#{charter.id}"
     end
   end
 
