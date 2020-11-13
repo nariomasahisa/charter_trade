@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream
 <mxfile host="65bd71144e" modified="2020-11-11T05:21:44.862Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.0 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="Lv_xN10dtROFdsEexZB3" version="13.6.5">
+=======
+<mxfile host="65bd71144e" modified="2020-11-13T02:18:40.902Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="3foJEOmoqH0zfRE9sDxK" version="13.6.5">
+>>>>>>> Stashed changes
     <diagram id="WsD_GxHVkoCh_pOkpDa1" name="ページ1">
-        <mxGraphModel dx="603" dy="723" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+        <mxGraphModel dx="237" dy="117" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -58,7 +62,11 @@
                 <mxCell id="23" value="sell_price" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="22" vertex="1">
                     <mxGeometry y="26" width="200" height="44" as="geometry"/>
                 </mxCell>
+<<<<<<< Updated upstream
                 <mxCell id="49" value="" style="endArrow=ERmany;html=1;rounded=0;strokeColor=#f0f0f0;strokeWidth=2;endFill=0;sourcePerimeterSpacing=5;startSize=11;jumpSize=4;endSize=30;targetPerimeterSpacing=6;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1">
+=======
+                <mxCell id="49" value="" style="endArrow=ERmany;html=1;rounded=0;strokeColor=#f0f0f0;strokeWidth=2;endFill=0;sourcePerimeterSpacing=5;startSize=11;jumpSize=4;endSize=30;targetPerimeterSpacing=6;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="6" edge="1">
+>>>>>>> Stashed changes
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="219" y="200" as="sourcePoint"/>
                         <mxPoint x="219" y="290" as="targetPoint"/>
@@ -80,10 +88,17 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
+<<<<<<< Updated upstream
                 <mxCell id="53" value="" style="endArrow=ERmany;html=1;rounded=0;strokeColor=#f0f0f0;strokeWidth=2;endFill=0;sourcePerimeterSpacing=5;startSize=11;jumpSize=4;endSize=30;targetPerimeterSpacing=6;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="3" target="22" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="380" y="220" as="sourcePoint"/>
                         <mxPoint x="620" y="220" as="targetPoint"/>
+=======
+                <mxCell id="54" value="" style="endArrow=ERone;html=1;rounded=0;strokeColor=#f0f0f0;strokeWidth=2;endFill=0;sourcePerimeterSpacing=5;startSize=11;jumpSize=4;endSize=30;targetPerimeterSpacing=6;exitX=0.6;exitY=0.029;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.996;entryY=0.791;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="590" y="551" as="sourcePoint"/>
+                        <mxPoint x="330" y="200" as="targetPoint"/>
+>>>>>>> Stashed changes
                         <Array as="points">
                             <mxPoint x="400" y="153"/>
                             <mxPoint x="400" y="280"/>
@@ -91,6 +106,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
+<<<<<<< Updated upstream
                 <mxCell id="54" value="" style="endArrow=ERmany;html=1;rounded=0;strokeColor=#f0f0f0;strokeWidth=2;endFill=0;sourcePerimeterSpacing=5;startSize=11;jumpSize=4;endSize=30;targetPerimeterSpacing=6;entryX=-0.003;entryY=0.082;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="7" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="119" y="160" as="sourcePoint"/>
@@ -98,6 +114,38 @@
                         <Array as="points">
                             <mxPoint x="40" y="160"/>
                             <mxPoint x="40" y="480"/>
+=======
+                <mxCell id="55" value="" style="endArrow=ERone;html=1;rounded=0;strokeColor=#f0f0f0;strokeWidth=2;endFill=0;sourcePerimeterSpacing=5;startSize=11;jumpSize=4;endSize=30;targetPerimeterSpacing=6;entryX=0.6;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="319" y="180" as="sourcePoint"/>
+                        <mxPoint x="589" y="550" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="439" y="180"/>
+                            <mxPoint x="439" y="330"/>
+                            <mxPoint x="589" y="330"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="56" value="" style="endArrow=ERone;html=1;rounded=0;strokeColor=#f0f0f0;strokeWidth=2;endFill=0;sourcePerimeterSpacing=5;startSize=11;jumpSize=4;endSize=30;targetPerimeterSpacing=6;exitX=1;exitY=0.353;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="7">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="519" as="sourcePoint"/>
+                        <mxPoint x="640" y="161" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="400" y="519"/>
+                            <mxPoint x="400" y="440"/>
+                            <mxPoint x="640" y="440"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" value="" style="endArrow=ERone;html=1;rounded=0;strokeColor=#f0f0f0;strokeWidth=2;endFill=0;sourcePerimeterSpacing=5;startSize=11;jumpSize=4;endSize=30;targetPerimeterSpacing=6;exitX=0.401;exitY=1.022;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.998;entryY=0.353;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="24" target="7">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="639" y="161" as="sourcePoint"/>
+                        <mxPoint x="319" y="523" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="640" y="440"/>
+                            <mxPoint x="400" y="440"/>
+                            <mxPoint x="400" y="520"/>
+>>>>>>> Stashed changes
                         </Array>
                     </mxGeometry>
                 </mxCell>
