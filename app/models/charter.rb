@@ -17,4 +17,6 @@ class Charter < ApplicationRecord
   belongs_to :user
   has_many :sells, dependent: :destroy
   has_one  :purchase, dependent: :destroy
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :prefecture
 end

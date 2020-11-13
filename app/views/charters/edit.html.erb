@@ -39,7 +39,7 @@
         <%= f.label :都道府県, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
-        <%= f.text_field :prefecture_id, class: 'chat__room_name chat-room-form__input', placeholder: '東京都'%>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture-category"}) %>
       </div>
     </div>
     <div class='chat-room-form__field'>

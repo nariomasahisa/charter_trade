@@ -11,7 +11,7 @@
     </div>
     <div class="charter-address">
       <div class="charter-address-value">発送先住所</div>
-      <div class="charter-address-value"><%= "#{@charter.prefecture_id}#{@charter.city}#{@charter.charter_address}#{@charter.build_name}"%></div>
+      <div class="charter-address-value"><%= "#{@charter.prefecture.name}#{@charter.city}#{@charter.charter_address}#{@charter.build_name}"%></div>
     </div>
     <div class="charter-size">
       <div class="charter-address-value">チャーター便才数</div>
