@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_11_051957) do
+ActiveRecord::Schema.define(version: 2020_11_13_023601) do
 
   create_table "charters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "departure", null: false
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 2020_11_11_051957) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_charters_on_user_id"
+  end
+
+  create_table "purchases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "charter_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["charter_id"], name: "index_purchases_on_charter_id"
+    t.index ["user_id"], name: "index_purchases_on_user_id"
   end
 
   create_table "sells", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -57,6 +66,8 @@ ActiveRecord::Schema.define(version: 2020_11_11_051957) do
   end
 
   add_foreign_key "charters", "users"
+  add_foreign_key "purchases", "charters"
+  add_foreign_key "purchases", "users"
   add_foreign_key "sells", "charters"
   add_foreign_key "sells", "users"
 end

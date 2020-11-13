@@ -38,7 +38,7 @@
   <div class="price-input">
     <% if user_signed_in? %>
         <%= form_with(model: [@charter, @sell], local: true) do |form| %>
-        <%= form.text_area :sell, placeholder: "コメントする", rows: "2" %>
+        <%= form.text_area :sell, placeholder: "コメントする"%>
         <%= form.submit "SEND" %>
       <% end %>
     <% else %>
@@ -51,6 +51,7 @@
       <li class="price-lists">
         <%= link_to "#{sell.sell}円", "/users/#{sell.user_id}", id: "price", class: "price-list" %>
         <%= link_to "削除", "/charters/#{@charter.id}/sells/#{sell.id}", method: :delete %>
+        <%= link_to "購入へ", charter_purchases_path(@charter.id)%>
       </li>
     <% end %>
   </ul>
