@@ -8,7 +8,7 @@
           <div class='charter-name'>
             <%= link_to "#{charter.departure}→#{charter.arrive}", charter_path(charter),class:'charter-name'%>
           </div>
-          <%= link_to "発注者:#{charter.user.username}", user_path(charter),  class: "name-link" %>
+          <%= link_to "発注者:#{charter.user.username}", user_path(charter.user),  class: "name-link" %>
         <% end %> 
       </div>
     </div>
