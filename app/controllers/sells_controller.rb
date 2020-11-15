@@ -1,12 +1,12 @@
 class SellsController < ApplicationController  
   def create
-    @sell = Sell.create(sell_params)
+    @sell = Sell.new(sell_params)
     if @sell.save
       redirect_to charter_path(@sell.charter)
     else
       @charter = @sell.charter
-      @sell = @charter.sell
-      render "charters/show"
+      @sells = @charter.sells
+      redirect_to root_path
     end
   end
 
