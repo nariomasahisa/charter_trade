@@ -27,6 +27,40 @@ li {
   font-size: 13px;
 }
 
+/* ------charter/index----- */
+.wrapper {
+  display: flex;
+}
+
+.charter_bar {
+  width: 100vw;
+  height: 100vh;
+  background-color: snow;
+}
+.charter_header {
+  height: 50px;
+  background-color: burlywood;
+}
+.charter_main {
+
+  height: calc(80vh-50px);
+  overflow: scroll;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.charter_lists {
+  width: 33%;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.charter_name a{
+
+}
+
+/* ------charter/new------- */
 .chat-room-form {
   width: 980px;
   margin: 60px auto;

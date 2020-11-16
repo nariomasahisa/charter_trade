@@ -1,6 +1,8 @@
 <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 <header class="top-page-header">
-  <h1 class='app-name'>Charter Trader</h1>
+  <h1 class='app-name'>
+    <%= link_to "Charter Trader", root_path,class:'app-name'%>
+  </h1>
   <div class="header-menu">
     <ul class='sign_in_up_lists'>
       <li><%= link_to 'チャーターをご要望の方', new_charter_path, class: "new-charter" %></li> 

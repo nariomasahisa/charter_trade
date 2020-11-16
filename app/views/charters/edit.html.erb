@@ -1,5 +1,6 @@
+<%= render "shared/header" %>
 <div class='chat-room-form'>
-  <h1>チャーター便発注</h1>
+  <h1>チャーター便編集</h1>
   <%=form_with model: @charter, local: true do |f|%>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
@@ -83,3 +84,4 @@
     </div>
   <% end %>
 </div>
+<%= render "shared/footer" %>
