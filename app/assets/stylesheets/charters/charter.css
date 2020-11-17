@@ -28,9 +28,6 @@ li {
   font-size: 13px;
 }
 
-/* ------charter/index----- */
-
-
 /* ------charters_image----- */
 .charter-image {
   position: relative;
@@ -213,7 +210,7 @@ li {
   width: 400px;
 }
 .chat-room-form__action-btn {
-  font-family: Hiragino Kaku Gothic StdN;
+  font-family: "Hiragino Kaku Gothic StdN";
   color: white;
   background-color: lightskyblue;
   border: 3px double white;

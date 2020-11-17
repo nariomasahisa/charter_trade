@@ -1,14 +1,44 @@
 <%= render "shared/header" %>
 <div class="purchase-content">
 <%# 購入内容の表示 %>
-
+  <div class='purchase-details'>
+    <div class='purchase-detail'>
+      <%= "チャーター情報：#{@charter.departure}→#{@charter.arrive}" %>
+    </div>
+    <div class='purchase-detail'>
+      <%= "チャーター先住所：#{@charter.prefecture.name}#{@charter.city}#{@charter.charter_address}#{@charter.build_name}" %>
+    </div>
+    <div class='purchase-detail'>
+      <%= "電話番号：#{@charter.tell_number}" %>
+    </div>
+  </div>
+  <div class='purchase-price'>
+      <div class='purchase-detail detail-price'>
+      <%= "チャーター購入価格：#{@sell.sell}円(税込)" %>
+    </div>
+  </div>
 <%# 支払額の表示 %>
+  <div class='purchase-user-detail'>
+    <div class='purchase-detail'>
+      <%= "チャーターを手配してくれるユーザー：#{@user.username}さん"%>
+    </div>
+    <div class='purchase-detail'>
+      <%= "#{@user.username}さんの住所：#{@user.city_address}" %>
+    </div>
+    <div class='purchase-detail'>
+      <%= "連絡先：#{@user.email}"%>
+    </div>
+
+  </div>
 <%# チャーター便手配先業者の表示 %>
+  <div class='purchase-user'>
+  <p>上記の内容が本件のチャーター便の内容です</p>
+  <p>上記の内容で間違いないでしょうか?</p>
+  <p>間違いなければ下記の購入ボタンをクリックしてください</p>
 <%# 購入ボタン %>
   <%= form_with(model: [@charter, @purchase],url: charter_purchases_path, id: 'charge-form', class: 'purchase-form-wrap',local: true) do |f| %>
-  <div class='buy-btn'>
-    <%= f.submit "購入" ,class:"buy-red-btn" %>
-  </div>
+    <%= f.submit "購入" ,class:"purchase-btn" %>
   <% end %>
+  </div>
 </div>
 <%= render "shared/footer" %>
