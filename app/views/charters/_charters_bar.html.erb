@@ -5,6 +5,7 @@
     <div class="charter_main">
       <div class="charter_lists">
         <% @charters.each do |charter| %>
+          <% if charter.purchase == nil%>
           <div class="charter_list">
             <div class='charter-box'>
               <div class='charter-number'>
@@ -16,6 +17,7 @@
               <%= link_to "発注者:#{charter.user.username}さん", user_path(charter.user)%>
             </div>
           </div>
+          <% end %>
         <% end %> 
       </div>
     </div>

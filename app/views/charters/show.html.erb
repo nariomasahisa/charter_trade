@@ -50,15 +50,17 @@
           <%= link_to "#{sell.sell}円", "/users/#{sell.user_id}", id: "price", class: "price-list" %>
           <span>(税込)</span>
           <div class='price-action'>
+          <% if user_signed_in? %>
           <% if @charter.user_id != current_user.id %>
           <%= link_to "削除", "/charters/#{@charter.id}/sells/#{sell.id}", method: :delete ,id: "price-action-btn", class:"price-action-btn" %>
           <% else %>
           <%= link_to "購入へ", charter_purchases_path(@charter.id),id: "price-action-btn", class:"price-action-btn"%>
           <% end %>
+          <% end %>
           </div>
         </li>
-      <% end %>
     </ul>
+    <% end %>
     </div>
     <div class='charter-show-right-lower'>
     <% if user_signed_in? %>
