@@ -10,7 +10,7 @@ class CreateCharters < ActiveRecord::Migration[6.0]
       t.string  :city,            null: false
       t.string  :charter_address, null: false
       t.string  :build_name,      null: false
-      t.integer :tell_number,     null: false
+      t.string :tell_number,     null: false
       t.references :user,         foreign_key: true
       t.timestamps
     end
