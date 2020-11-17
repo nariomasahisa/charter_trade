@@ -1,6 +1,7 @@
+/* devise */
 .account-page .account-page__inner {
   width: 980px;
-  margin: 60px auto;
+  margin: 100px auto;
   padding: 60px;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -57,14 +58,20 @@
   letter-spacing: 1px;
 }
 .account-page .btn {
+  font-family: 'hiragino kaku gothic stdn';
   display: inline-block;
   height: 50px;
   padding: 0 30px;
   line-height: 50px;
   letter-spacing: 1px;
   text-align: center;
-  border: none;
+  border: 3px double white;
   border-radius: 2px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.account-page .btn:hover {
+  background-color: red;
 }
 .account-page input[type=submit] {
   float: left;
@@ -111,4 +118,26 @@
   margin: 0;
   padding: 0;
   font-size: 13px;
+}
+
+/* user_new */
+.create-account {
+  color: blue;
+  font-family: "hiragino kaku gothic stdn";
+  margin: 200px auto;
+  font-size: 40px;
+}
+
+/* user_show.html */
+.user-show {
+  width: 100vw;
+  height: calc(100vh - 20vh);
+}
+.user-show-detail {
+  margin: auto;
+  font-size: 40px;
+  font-family: "hiragino kaku gothic stdn";
+}
+.user-name {
+  padding: 40px;
 }

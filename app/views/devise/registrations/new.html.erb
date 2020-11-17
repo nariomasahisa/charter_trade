@@ -1,15 +1,15 @@
+<%= render "shared/header" %>
 <div class='account-page' id='account-page'>
   <div class='account-page__inner clearfix'>
     <div class='account-page__inner--left account-page__header'>
-      <h2>Create Account</h2>
-      <h5>新規アカウントの作成</h5>
+      <div class=create-account>アカウントの登録</div>
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
         <%= devise_error_messages!%>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :username%>
+            <%= f.label :アカウント名%>
           </div>
           <div class='field-input'>
             <%= f.text_field :username, autofocus: true%>
@@ -25,8 +25,8 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :password%>
-            <i>(英数字6文字以上)</i>
+            <%= f.label :パスワード%>
+            <i>(英数字8文字以上)</i>
           </div>
           <div class='field-input'>
             <%= f.password_field :password, autocomplete: "off"%>
@@ -34,7 +34,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :password_confirmation%>
+            <%= f.label :'パスワード<確認用>'%>
           </div>
           <div class='field-input'>
             <%= f.password_field :password_confirmation, autocomplete: "off"%>
@@ -75,9 +75,10 @@
         </div>
 
         <div class='actions'>
-          <%= f.submit "Create Account", class: 'btn'%>
+          <%= f.submit "アカウントを作成します", class: 'btn', id: 'btn'%>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+<%= render "shared/footer" %>
