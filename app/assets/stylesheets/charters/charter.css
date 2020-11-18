@@ -38,11 +38,12 @@ li {
   background-size: cover;
   width: 100%;
   height: auto;
+  opacity: 0.8;
 }
 .title_message_1, .title_message_2, .main_message1, .main_message2, .main_message3 {
   position: absolute;
   font-family: 'Hiragino Kaku Gothic StdN';
-  color: #fff;  
+  color: #FFF;  
 }
 .title_message_1, .title_message_2 {
   font-size: 50px;
@@ -90,7 +91,7 @@ li {
 }
 
 .charter_main {
-  height: 300px;
+  height: 700px;
   overflow: scroll;
 }
 
