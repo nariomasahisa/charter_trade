@@ -5,7 +5,7 @@
     <div class="charter_main">
       <div class="charter_lists">
         <% @charters.each do |charter| %>
-          <% if charter.purchase == nil%>
+          <% if charter.purchase == nil %>
           <div class="charter_list">
             <div class='charter-box'>
               <div class='charter-number'>
@@ -19,6 +19,11 @@
           </div>
           <% end %>
         <% end %> 
+        <% if @charters.length == 0 || @charters.length - @purchases.length == 0 %>
+          <div class='charter-notice'>
+            <%= link_to 'クリックしてチャーターを発注してください', new_charter_path, class: "new-charter" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

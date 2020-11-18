@@ -138,6 +138,12 @@ li {
   position: absolute;
   right: 20px;
 }
+.charter-notice {
+  margin: 20px;
+  font-size: 30px;
+  color: black;
+  font-family: 'hiragino kaku gothic stdn';
+}
 
 /* ------charter/new-edit------- */
 .charter-new-form {
