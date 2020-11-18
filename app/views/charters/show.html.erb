@@ -62,13 +62,14 @@
     </ul>
     <% end %>
     </div>
+
     <div class='charter-show-right-lower'>
     <% if user_signed_in? %>
       <% if current_user.id != @charter.user_id %>
       <div class="price-form">
-        <%= form_with(model: [@charter, @sell], local: true) do |form| %>
-        <%= form.text_area :sell, placeholder: "価格を入力する", class:"price-input"%>
-        <%= form.submit "SEND", class:"price-submit" %>
+        <%= form_with(model: [@charter, @sell], local: true, id: "price-form") do |form| %>
+        <%= form.text_area :sell, placeholder: "価格を入力する", class:"price-input", id: "content"%>
+        <%= form.submit "SEND", id: "price-submit-btn" ,class:"price-submit" %>
         <% end %>
       </div>
       <% end %>  
