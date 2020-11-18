@@ -4,6 +4,7 @@ class ChartersController < ApplicationController
   
   def index
     @charters = Charter.all
+    @purchases = Purchase.all
   end
   def new
     @charter = Charter.new

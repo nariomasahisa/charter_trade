@@ -1,0 +1,43 @@
+.purchase-content {
+  height: 80vh;
+  overflow: scroll;
+}
+
+.purchase-details {
+  height: 300px;
+}
+.purchase-detail {
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  font-family: 'hiragino kaku gothic stdn';
+}
+.purchase-price {
+  height: 100px;
+}
+.detail-price {
+  color: red;
+}
+.purchase-user-detail {
+  height: 300px;
+}
+.purchase-user {
+  height: 300px;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+}
+.purchase-btn {
+  font-family: "Hiragino Kaku Gothic StdN";
+  color: white;
+  background-color: red;
+  border: 3px double white;
+  padding: 0 20px;
+  height: 50px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  margin: 40px;
+}
+.purchase-btn:hover {
+  background-color: lightblue;
+}

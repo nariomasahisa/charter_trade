@@ -1,6 +1,10 @@
-<div class="contents row">
-  <p>ユーザー名:<%= @user.username %>さん</p>
-  <p>住所:<%= @user.city_address %></p>
-  <p>連絡先:<%= @user.email %></p>
+<%= render "shared/header" %>
+<div class="user-show">
+  <div class="user-show-detail">
+  <div class='user-name'>ユーザー名:<%= @user.username %>さん</div>
+  <div class='user-name'>住所:<%= @user.city_address %></div>
+  <div class='user-name'>連絡先:<%= @user.email %></div>
   <p></p>
+  </div>
 </div>
+<%= render "shared/footer" %>
