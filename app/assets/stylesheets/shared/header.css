@@ -2,13 +2,17 @@
   box-sizing: border-box;
 }
 .top-page-header {
-  background-color: white;
-  height: 10vh;
+  background-color: cornsilk;
+  height: 80px;
+  position: relative;
 }
 
 .app-name {
+  width: 300px;
   font-size: 20px;
-  font-family: 'Bangers', cursive;
+  position: absolute;
+  top: 10px;
+  left: 30px;
 }
 
 
@@ -20,12 +24,25 @@
 }
 
 .sign_in_up_lists {
+  position: absolute;
+  top: 30px;
+  right: 100px;
+  padding-right: 10px;
   display: flex;
   justify-content: left;
-  padding-right: 10px;
 }
 
 .new-charter, .log-in, .sign-up, .log-out, .log-in-user {
-  font-size: 15px;
-  padding: 0 15px;
+  font-family: "hiragino kaku gothic stdn";
+  color: black;
+  background-color: white;
+  border: 3px double black;
+  padding: 10px 20px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  margin: 25px;
 }
+.new-charter:hover, .log-in:hover, .sign-up:hover, .log-out:hover, .log-in-user:hover {
+  color: white;
+  background-color: black;
+  border: 3px double white;}
