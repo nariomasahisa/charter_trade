@@ -9,7 +9,6 @@ class Charter < ApplicationRecord
     validates :prefecture_id
     validates :city
     validates :charter_address
-    validates :build_name
     validates :tell_number
   end
   

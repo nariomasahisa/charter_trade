@@ -11,5 +11,32 @@
 
   <body>
     <%= yield %>
+    <script>
+    function initMap() {
+      const target = document.getElementById('gmap');
+      const address = document.getElementById('address').textContent;
+      const geocoder = new google.maps.Geocoder();
+
+      geocoder.geocode({ address: address }, function (results, status) {
+        if (status === 'OK' && results[0]){
+          const map =new google.maps.Map(target, {
+            center: results[0].geometry.location,
+            zoom: 16
+          });
+          const marker = new google.maps.Marker({
+            position: results[0].geometry.location,
+            map: map,
+            animation: google.maps.Animation.DROP
+          });
+       
+       
+       }else{
+         alert('失敗しました。理由: ' + status);
+         return;
+       }
+      });
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API']%>&callback=initMap" async defer></script>
   </body>
 </html>
