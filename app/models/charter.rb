@@ -19,4 +19,13 @@ class Charter < ApplicationRecord
   has_one  :purchase, dependent: :destroy
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
+
+  # search
+  def self.search(search)
+    if search != ""
+      Charter.where('arrive LIKE(?)', "%#{search}%")
+    else
+      Charter.all
+    end
+  end
 end

@@ -1,5 +1,5 @@
 class ChartersController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :search]
   before_action :set_charter, only: [:show, :edit, :update, :destroy]
   
   def index
@@ -39,6 +39,11 @@ class ChartersController < ApplicationController
     if @charter.destroy
       redirect_to root_path
     end
+  end
+
+  def search
+    @charters = Charter.search(params[:keyword])
+    
   end
 
   private
