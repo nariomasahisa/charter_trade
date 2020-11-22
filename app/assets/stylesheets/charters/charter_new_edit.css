@@ -1,0 +1,85 @@
+.charter-new-form {
+  width: 980px;
+  height: calc(100vh - 20vh);
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.charter-new-form__errors {
+  margin: 30px 0;
+  padding: 20px 40px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  text-align: center;
+}
+.charter-new-form__label {
+  display: block;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: right;
+}
+.charter-new-form__input {
+  float: left;
+  width: 100%;
+  line-height: 30px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+.charter-new-form__action-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  color: #fff;
+  background-color: #38aef0;
+  border: 0;
+}
+.charter-new-form__field {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.charter-new-form__field:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.charter-new-form__field--left {
+  float: left;
+  width: 300px;
+  padding-right: 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.charter-new-form__field--right {
+  float: left;
+  width: 400px;
+}
+.charter-new-form__label_hash {
+  float: right;
+  line-height: 50px;
+  font-weight: bold;
+}
+.select-box {
+  height: 50px;
+  width: 400px;
+}
+.chat-room-form__action-btn {
+  font-family: "Hiragino Kaku Gothic StdN";
+  color: white;
+  background-color: lightskyblue;
+  border: 3px double white;
+  padding: 0 20px;
+  height: 50px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.chat-room-form__action-btn:hover {
+  color: white;
+  background-color: red;
+  border: 3px double white;
+}
