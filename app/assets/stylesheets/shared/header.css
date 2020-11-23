@@ -12,7 +12,7 @@
   display: flex;
 }
 .app-name {
-  font-size: 30px;
+  font-size: 3em;
 
 }
 
@@ -109,7 +109,7 @@
     display: flex;
   }
   .app-name {
-    font-size: 10px;
+    font-size: 5em;
   
   }
   
@@ -121,13 +121,12 @@
   }
   
   .sign_in_up_lists {
-    padding-right: 10px;
+    padding-right: 0;
     display: flex;
     justify-content: left;
   }
   
   .new-charter, .log-in, .sign-up, .log-out, .log-in-user {
-    font-size: 5px;
     font-family: "hiragino kaku gothic stdn";
     color: black;
     background-color: white;
@@ -135,12 +134,12 @@
     padding: 1px;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
-    margin: 5px;
-  
+    margin: 3px;
   }
   .new-charter:hover, .log-in:hover, .sign-up:hover, .log-out:hover, .log-in-user:hover {
     color: white;
     background-color: black;
-    border: 3px double white;}
+    border: 3px double white;
+  }
 
 }
