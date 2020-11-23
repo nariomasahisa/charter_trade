@@ -135,9 +135,13 @@
 }
 .user-show-detail {
   margin: auto;
-  font-size: 40px;
+  font-size: 1.5em;
   font-family: "hiragino kaku gothic stdn";
 }
+.user-title {
+  padding: 10px 0 0 30px;
+  font-size: 1em;
+}
 .user-name {
-  padding: 40px;
+  padding: 0 0 20px 40px;
 }
