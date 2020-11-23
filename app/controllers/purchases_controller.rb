@@ -2,7 +2,7 @@ class PurchasesController < ApplicationController
   def index
     @charter = Charter.find(params[:charter_id])
     @sell = Sell.find(params[:charter_id])
-    @user = User.find(params[:charter_id])
+    @user = User.find(params[:user_id])
     @purchase = Purchase.new
   end
   

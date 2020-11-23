@@ -22,6 +22,7 @@ class ChartersController < ApplicationController
   def show
     @sell = Sell.new
     @sells = @charter.sells.order(sell: :asc).first(1)
+    @purchase = Purchase.new
   end
   
   def edit  

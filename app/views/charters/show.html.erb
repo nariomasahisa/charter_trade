@@ -48,7 +48,10 @@
           <% if @charter.user_id != current_user.id %>
           <%= link_to "削除", "/charters/#{@charter.id}/sells/#{sell.id}", method: :delete ,id: "price-action-btn", class:"price-action-btn" %>
           <% else %>
-          <%= link_to "購入へ", charter_purchases_path(@charter.id),id: "price-action-btn", class:"price-action-btn"%>
+          <%= form_with(model: [@charter, @purchase], id: 'charge-form', class: 'purchase-form-wrap',local: true) do |f| %>
+            <%= f.submit "購入" ,class:"purchase-btn" %>
+          <% end %>
+          <%# <%= link_to "購入へ", charter_purchases_path(@charter.id),id: "price-action-btn", class:"price-action-btn"%>
           <% end %>
           <% end %>
           </div>
