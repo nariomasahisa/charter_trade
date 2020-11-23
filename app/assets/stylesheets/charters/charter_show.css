@@ -1,48 +1,42 @@
 .charter_show_header {
   height: 100px;
-  font-size: 40px;
-  font-family: 'Hiragino Kaku Gothic StdN';
   color: #fff;
   background-color: #B22222;
   display: flex;
-  justify-content: left;
   align-items: center;
-  padding-left: 20px;
 }
-.charter_show {
-  height: calc(100vh - 100px - 20vh);
-  display: flex;
-  justify-content: space-around;
-}
-
-.charter-show-left {
-  width: 33%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 60px;
-}
-.charter-details {
-  width: 500px;
-}
-.charter-departure-arrive ,.charter-buy-price, .charter-address, .charter-size {
-  padding: 10px;
-  margin: 10px;
-}
-.show-name, .charter-value {
+.charter_show_title {
+  padding-left: 40px;
+  font-size: 2.7em;
   font-family: 'Hiragino Kaku Gothic StdN';
 }
-.charter-value {
-  font-size: 20px;
+.charter_show {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: left;
+}
+.left-content,  .right-content {
+  width: calc((100%-40px)/3);
+}
+.center-content {
+  width: 25%;
+}
+.left-content, .center-content {
+  font-family: 'hiragino kaku gothic stdn';
+}
+.charter-detail {
+  margin: 20px;
 }
 .show-name {
-  font-size: 15px;
+  font-size: 20px;
+}
+.charter-value {
+  font-size: 30px;
 }
 .charter-action {
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 .charter-edit-btn, .charter-delete-btn {
   width: 150px;
@@ -64,62 +58,17 @@
   background-color: red;
   border: 3px double white;
 }
-/* ----------------------- */
-.charter-show-center {
-  width: 33%;
-  height: 100%;
-  padding: 60px;
-  align-items: center;
+
+.center-content {
+  text-align: center;
 }
-.charter-map {
-  /* border: 1px solid red; */
-  width: 100%;
-  height: 300px;
-}
-/* ------------------------- */
-.charter-show-right {
-  width: 33%;
-  height: 100%;
-  padding: 20px;
-  position: relative;
-}
-.charter-show-right-upper {
-  position: absolute;
-  top: 100px;
-  left: 100px;
-}
-.now-price {
+.now-price, .price-row, .price-action {
+  margin-top: 20px;
   font-size: 20px;
 }
 .price-list {
-  font-size: 40px;
-  font-family: "Hiragino Kaku Gothic StdN";
-}
-.price-action {
-  padding: 10px 0;
-}
-.price-action-btn {
-  color: white;
-  width: 100px;
-  text-align: center;
-  padding: 10px 30px;
-  margin: 20px;
-  font-family: "Hiragino Kaku Gothic StdN";
-  background-color: lightskyblue;
-  border: 3px double white;
-  height: 50px;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-.price-action-btn:hover {
-  color: white;
-  background-color: red;
-  border: 3px double white;
-}
-.charter-show-right-lower {
-  position: absolute;
-  top: 300px;
-  left: 60px;
+  font-size: 30px;
+  color: red;
 }
 .price-form {
   background-color: white;
@@ -131,7 +80,7 @@
   text-align: center;
   font-size: 20px;
   padding: 0 20px;  
-  margin: 0 30px;
+  margin: 40px 30px 0 30px;
   width: 200px;
   height: 40px;
   box-sizing: border-box;
@@ -151,4 +100,36 @@
   color: white;
   background-color: red;
   border: 3px double white;
-}         
+}
+.price-action-btn {
+  color: white;
+  width: 50px;
+  text-align: center;
+  padding: 10px 30px;
+  margin: 10px;
+  font-family: "Hiragino Kaku Gothic StdN";
+  background-color: lightskyblue;
+  border: 3px double white;
+  height: 50px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.price-action-btn:hover {
+  color: white;
+  background-color: red;
+  border: 3px double white;
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .charter_show {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+  .left-content, .right-content, .center-content {
+    width: 100%;
+  }
+}

@@ -3,45 +3,39 @@
 <div class="charter_show_header">
   <div class="charter_show_title">チャーター便詳細</div>
 </div>
+
 <div class='charter_show'>
-  <div class="charter-show-left">
-    <div class="charter-details">
-      <div class="charter-departure-arrive">
-        <div class="show-name">配達先:</div>
-        <div class="charter-value"><%= "#{@charter.departure}→#{@charter.arrive}" %></div>
-      </div>
-      <div class="charter-buy-price">
-        <div class="show-name">発注者希望価格:</div>
-        <div class="charter-value"><%= "#{@charter.buy_price}円"%></div>
-      </div>
-      <div class="charter-address">
-        <div class="show-name">発送先住所:</div>
-        <div id='address' class="charter-value"><%= @charter.city + @charter.charter_address + @charter.build_name %></div>
-      </div>
-      <div class="charter-size">
-        <div class="show-name">チャーター便才数:</div>
-        <div class="charter-value"><%= "#{@charter.size}才"%></div>
-      </div>
-      <% if user_signed_in? && @charter.user_id == current_user.id %>
-      <div class="charter-action">
-        <div class="charter-edit-btn">
-          <%= link_to "編集する", edit_charter_path(@charter) %>
-        </div>
-        <div class="charter-delete-btn">
-          <%= link_to "削除", charter_path(@charter), method: :delete %>
-        </div>
-      </div>
-      <% end %>
+
+  <div class="left-content">
+    <div class="charter-detail">
+      <div class="show-name">配達先:</div>
+      <div class="charter-value"><%= "#{@charter.departure}→#{@charter.arrive}" %></div>
     </div>
+    <div class="charter-detail">
+      <div class="show-name">発注者希望価格:</div>
+      <div class="charter-value"><%= "#{@charter.buy_price}円"%></div>
+    </div>
+    <div class="charter-detail">
+      <div class="show-name">発送先住所:</div>
+      <div id='address' class="charter-value"><%= @charter.city + @charter.charter_address + @charter.build_name %></div>
+    </div>
+    <div class="charter-detail">
+      <div class="show-name">チャーター便才数:</div>
+      <div class="charter-value"><%= "#{@charter.size}才"%></div>
+    </div>
+    <% if user_signed_in? && @charter.user_id == current_user.id %>
+    <div class="charter-action">
+      <div class="charter-edit-btn">
+        <%= link_to "編集する", edit_charter_path(@charter) %>
+      </div>
+      <div class="charter-delete-btn">
+        <%= link_to "削除", charter_path(@charter), method: :delete %>
+      </div>
+    </div>
+    <% end %>
   </div>
 
-  <div class='charter-show-center'>
-    
-    <div id='gmap'class="charter-map">
-    </div>
-  </div>
-
-  <div class="charter-show-right">
+  <div class='center-content'>
     <div class='charter-show-right-upper'>
     <div class="now-price">ただいまの最安値</div>
     <ul class="price-row">  
@@ -60,9 +54,8 @@
           </div>
         </li>
     </ul>
-    <% end %>
+    <% end %>  
     </div>
-
     <div class='charter-show-right-lower'>
     <% if user_signed_in? %>
       <% if current_user.id != @charter.user_id %>
@@ -77,6 +70,15 @@
       <strong><p>※ 価格の提示には新規登録/ログインが必要です ※</p></strong>
     <% end %>
     </div>
+
+  </div>
+
+  <div class="right-content">
+    <div id='gmap'class="charter-map">
+    </div>
   </div>
 </div>
+
 <%= render "shared/footer" %>
+
+
