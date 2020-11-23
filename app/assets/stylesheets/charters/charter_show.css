@@ -15,12 +15,10 @@
   padding: 20px;
   display: flex;
   justify-content: left;
+  overflow: scroll;
 }
-.left-content,  .right-content {
+.left-content {
   width: calc((100%-40px)/3);
-}
-.center-content {
-  width: 25%;
 }
 .left-content, .center-content {
   font-family: 'hiragino kaku gothic stdn';
@@ -61,7 +59,10 @@
 
 .center-content {
   text-align: center;
+  width: 25%;
 }
+
+
 .now-price, .price-row, .price-action {
   margin-top: 20px;
   font-size: 20px;
@@ -120,6 +121,14 @@
   border: 3px double white;
 }
 
+.right-content {
+  width: 30vw;
+}
+.charter-map {
+  height: 400px;
+  width: 100%;
+  margin-left: 60px;
+}
 
 
 
