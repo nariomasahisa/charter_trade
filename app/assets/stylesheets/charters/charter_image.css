@@ -1,0 +1,70 @@
+.charter-image {
+  position: relative;
+}
+.image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+
+.top-messages {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 50%;
+}
+.top-title {
+  margin: 20px;
+}
+.top-contents {
+  margin: 10px;
+}
+.title_message_1, .title_message_2, .main_message1, .main_message3 {
+  font-family: 'Hiragino Kaku Gothic StdN';
+  color: #FFF;  
+}
+.title_message_1, .title_message_2 {
+  font-size: 3vw;
+}
+.main_message1, .main_message3 {
+  font-size: 2vw;
+}
+.scroll-btn {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid blue;
+  border-radius: 50%;
+  right: 10%;
+  top: 5%;
+  font-size: 15px;
+  padding: 25px 0;
+  opacity: 0.5;
+}
+
+@media (max-width: 1000px){
+  .top-title {
+    margin: 15px;
+  }
+  .top-contents {
+    margin: 8px;
+  }
+  .title_message_1, .title_message_2, .main_message1, .main_message3 {
+    font-family: 'Hiragino Kaku Gothic StdN';
+    color: #FFF;  
+  }
+}
+
+@media (max-width: 500px){
+  .top-title {
+    margin: 10px;
+  }
+  .top-contents {
+    margin: 5px;
+  }
+}

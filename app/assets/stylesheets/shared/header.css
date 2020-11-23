@@ -4,29 +4,26 @@
 .top-page-header {
   background-color: cornsilk;
   height: 80px;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
+.header-left {
+  display: flex;
+}
 .app-name {
-  width: 300px;
-  font-size: 20px;
-  position: absolute;
-  top: 10px;
-  left: 30px;
-}
-
-
-.header-menu {
+  font-size: 3em;
 
 }
 
-.menu-lists {
+
+.header-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sign_in_up_lists {
-  position: absolute;
-  top: 30px;
-  right: 100px;
   padding-right: 10px;
   display: flex;
   justify-content: left;
@@ -37,12 +34,112 @@
   color: black;
   background-color: white;
   border: 3px double black;
-  padding: 10px 20px;
+  padding: 5px;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  margin: 25px;
+  margin: 10px;
+
 }
 .new-charter:hover, .log-in:hover, .sign-up:hover, .log-out:hover, .log-in-user:hover {
   color: white;
   background-color: black;
   border: 3px double white;}
+
+
+
+@media (max-width: 1000px) {
+
+  .top-page-header {
+    background-color: cornsilk;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-left {
+    display: flex;
+  }
+  .app-name {
+    font-size: 25px;
+  
+  }
+  
+  
+  .header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sign_in_up_lists {
+    padding-right: 3px;
+    display: flex;
+    justify-content: left;
+  }
+  
+  .new-charter, .log-in, .sign-up, .log-out, .log-in-user {
+    font-size: 10px;
+    font-family: "hiragino kaku gothic stdn";
+    color: black;
+    background-color: white;
+    border: 3px double black;
+    padding: 5px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    margin: 10px;
+  
+  }
+  .new-charter:hover, .log-in:hover, .sign-up:hover, .log-out:hover, .log-in-user:hover {
+    color: white;
+    background-color: black;
+    border: 3px double white;}
+
+}
+
+@media (max-width: 500) {
+
+  .top-page-header {
+    background-color: cornsilk;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-left {
+    display: flex;
+  }
+  .app-name {
+    font-size: 5em;
+  
+  }
+  
+  
+  .header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sign_in_up_lists {
+    padding-right: 0;
+    display: flex;
+    justify-content: left;
+  }
+  
+  .new-charter, .log-in, .sign-up, .log-out, .log-in-user {
+    font-family: "hiragino kaku gothic stdn";
+    color: black;
+    background-color: white;
+    border: 3px double black;
+    padding: 1px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    margin: 3px;
+  }
+  .new-charter:hover, .log-in:hover, .sign-up:hover, .log-out:hover, .log-in-user:hover {
+    color: white;
+    background-color: black;
+    border: 3px double white;
+  }
+
+}
