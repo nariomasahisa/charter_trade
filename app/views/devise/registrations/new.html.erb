@@ -9,7 +9,7 @@
         <%= devise_error_messages!%>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :アカウント名%>
+            <%= f.label :username, 'アカウント名'%>
           </div>
           <div class='field-input'>
             <%= f.text_field :username, autofocus: true%>
@@ -17,7 +17,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :email%>
+            <%= f.label :email, 'メールアドレス'%>
           </div>
           <div class='field-input'>
             <%= f.email_field :email%>
@@ -25,7 +25,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :パスワード%>
+            <%= f.label :password, 'パスワード'%>
             <i>(英数字8文字以上)</i>
           </div>
           <div class='field-input'>
@@ -34,7 +34,7 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :'パスワード<確認用>'%>
+            <%= f.label :password_confirmation, 'パスワード<確認用>'%>
           </div>
           <div class='field-input'>
             <%= f.password_field :password_confirmation, autocomplete: "off"%>
@@ -43,7 +43,7 @@
 
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :電話番号%>
+            <%= f.label :phone_number, "電話番号"%>
           </div>
           <div class='field-input'>
             <%= f.text_field :phone_number, autofocus: true%>

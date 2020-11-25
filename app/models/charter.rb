@@ -4,7 +4,6 @@ class Charter < ApplicationRecord
     validates :departure
     validates :arrive
     validates :size
-    validates :delivery_date
     validates :buy_price
     validates :prefecture_id
     validates :city
