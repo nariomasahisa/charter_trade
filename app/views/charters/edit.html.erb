@@ -4,7 +4,7 @@
   <%=form_with model: @charter, local: true do |f|%>
     <div class='charter-new-form__field'>
       <div class='charter-new-form__field--left'>
-        <%= f.label :出発地, class: 'charter-new-form__label'%>
+        <%= f.label :departure, "出発地", class: 'charter-new-form__label'%>
       </div>
       <div class='charter-new-form__field--right'>
         <%= f.text_field :departure, class: 'charter-new-form__input', placeholder: '出発地を入力してください'%>
@@ -12,7 +12,7 @@
     </div>
     <div class='charter-new-form__field'>
       <div class='charter-new-form__field--left'>
-        <%= f.label :到着地, class: 'charter-new-form__label'%>
+        <%= f.label :arrive, "到着地", class: 'charter-new-form__label'%>
       </div>
       <div class='charter-new-form__field--right'>
         <%= f.text_field :arrive, class: 'charter-new-form__input', placeholder: '到着地を入力してください'%>
@@ -20,7 +20,7 @@
     </div>
     <div class='charter-new-form__field'>
       <div class='charter-new-form__field--left'>
-        <%= f.label :才数, class: 'charter-new-form__label'%>
+        <%= f.label :size, "才数", class: 'charter-new-form__label'%>
       </div>
       <div class='charter-new-form__field--right'>
         <%= f.text_field :size, class: 'charter-new-form__input', placeholder: '才数'%>
@@ -28,7 +28,7 @@
     </div>
     <div class='charter-new-form__field'>
       <div class='charter-new-form__field--left'>
-        <%= f.label :希望価格, class: 'charter-new-form__label'%>
+        <%= f.label :buy_price, "希望価格", class: 'charter-new-form__label'%>
       </div>
       <div class='charter-new-form__field--right'>
         <%= f.text_field :buy_price, class: 'charter-new-form__input', placeholder: '50000'%>
@@ -36,7 +36,7 @@
     </div>
     <div class='charter-new-form__field'>
       <div class='charter-new-form__field--left'>
-        <%= f.label :都道府県, class: 'charter-new-form__label_hash'%>
+        <%= f.label :prefecture_id, "都道府県", class: 'charter-new-form__label_hash'%>
       </div>
       <div class='charter-new-form__field--right_hash'>
         <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture-category"}) %>
@@ -44,7 +44,7 @@
     </div>
     <div class='charter-new-form__field'>
       <div class='charter-new-form__field--left'>
-        <%= f.label :市区町村, class: 'charter-new-form__label'%>
+        <%= f.label :city, "市区町村", class: 'charter-new-form__label'%>
       </div>
       <div class='charter-new-form__field--right'>
         <%= f.text_field :city, class: 'charter-new-form__input', placeholder: '千代田区'%>
@@ -52,7 +52,7 @@
     </div>
     <div class='charter-new-form__field'>
       <div class='charter-new-form__field--left'>
-        <%= f.label :番地, class: 'charter-new-form__label'%>
+        <%= f.label :charter_address, "番地", class: 'charter-new-form__label'%>
       </div>
       <div class='charter-new-form__field--right'>
         <%= f.text_field :charter_address, class: 'charter-new-form__input', placeholder: '1-1'%>
@@ -60,7 +60,7 @@
     </div>
     <div class='charter-new-form__field'>
       <div class='charter-new-form__field--left'>
-        <%= f.label :建物名, class: 'charter-new-form__label'%>
+        <%= f.label :build_name, "建物名", class: 'charter-new-form__label'%>
       </div>
       <div class='charter-new-form__field--right'>
         <%= f.text_field :build_name, class: 'chat__room_name charter-new-form__input', placeholder: '〇〇ビル〇〇'%>
@@ -68,7 +68,7 @@
     </div>
     <div class='charter-new-form__field'>
       <div class='charter-new-form__field--left'>
-        <%= f.label :電話番号, class: 'charter-new-form__label'%>
+        <%= f.label :tell_number, "電話番号", class: 'charter-new-form__label'%>
       </div>
       <div class='charter-new-form__field--right'>
         <%= f.text_field :tell_number, class: 'charter-new-form__input', placeholder: '09012345678'%>
