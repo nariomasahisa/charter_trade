@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Charter", type: :system do
+RSpec.describe "発注", type: :system do
   before do
     @charter = FactoryBot.build(:charter)
     @user = FactoryBot.create(:user)
@@ -67,7 +67,7 @@ RSpec.describe "Charter", type: :system do
   end
 end
 
-RSpec.describe "Charter", type: :system do
+RSpec.describe "詳細", type: :system do
   before do
     @user = FactoryBot.create(:user)
     @charter1 = FactoryBot.create(:charter)
@@ -107,7 +107,7 @@ RSpec.describe "Charter", type: :system do
   end
 end
 
-RSpec.describe "Charter", type: :system do
+RSpec.describe "編集", type: :system do
   before do
     @user = FactoryBot.create(:user)
     @charter1 = FactoryBot.create(:charter)
@@ -166,7 +166,7 @@ RSpec.describe "Charter", type: :system do
   end
 end
 
-RSpec.describe "Charter", type: :system do
+RSpec.describe "削除", type: :system do
   before do
     @charter1 = FactoryBot.create(:charter)
     @charter2 = FactoryBot.create(:charter)

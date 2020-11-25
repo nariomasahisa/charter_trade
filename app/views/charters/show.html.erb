@@ -51,7 +51,6 @@
           <%= form_with(model: [@charter, @purchase], id: 'charge-form', class: 'purchase-form-wrap',local: true) do |f| %>
             <%= f.submit "購入" ,class:"purchase-btn" %>
           <% end %>
-          <%# <%= link_to "購入へ", charter_purchases_path(@charter.id),id: "price-action-btn", class:"price-action-btn"%>
           <% end %>
           <% end %>
           </div>
@@ -68,7 +67,7 @@
         <%= form.submit "SEND", id: "price-submit-btn" ,class:"price-submit" %>
         <% end %>
       </div>
-      <% end %>  
+      <% end %> 
     <% else %>
       <strong><p>※ 価格の提示には新規登録/ログインが必要です ※</p></strong>
     <% end %>
