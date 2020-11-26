@@ -5,125 +5,62 @@
   チャーター便のオークションサイト
 
 ## URL
+  http://www.charter-trader.com/
 ## テスト用アカウント
-## 作成背景
-  大型の荷物をチャーターで手配する際に、買い手と売り手の金額が合わなくて、取引が成立しないことが多くなってきているなと感じました。運送会社、チャーター便手配会社の取引相手を多く参加させることにより、チャーター便の適性価格をオークション形式にして、金額が合わなくて手配できないという状況が改善されるのではないかと考えた。
+  ユーザー1：tanaka@gmail.com
+           Tanaka111
+  ユーザー2：nakata@gmail.com
+           Nakata111
+## 制作背景
+  前職でキッチンやユニットバスを現場に手配する仕事に携わっていました。
+  場所的に九州の辺境の場所だったりすることもあり、そこまでチャーターを手配してくれる業者が少な買ったこと、
+  業者がいても価格が合わなくて手配が厳しかったりするなどといった状況がありました。
+  オークション形式でチャーター便を発注することで、業者の参加を多くしよりチャーターの価格を適正価格に近づけることができるのではないかと思った点と、チャーターの一覧を表示させ、価格提示できる機会を設けることにより、運送会社側のビジネスチャンスが増えるのではないかと考えこのアプリケーションを作成しました。
+  今回のアプリケーションの想定されるユーザーは3PLを行っている運送会社です。これらの企業は参加に多くの運送会社を抱えていると聞いていたので、3PLの企業に提供することで、多くの業者がチャーターの取引に参加できるのではないかと思っています。
+  このサービスが業者間でうまくいく運用できるようになれば、エンドユーザーに対しても、例えば引越しの際に利用してもらえるのではないかとも考えています。
+## 主な利用シーン
+  大型の荷物を特定の住所へ直接手配する際に利用する。
+  【発注者】
+    取引先からチャーターの注文をもらい発注を行う。
+  【入札側】
+    発注者からきた価格に対して価格を提示する
+  【発注者】
+    入札者からの提示された金額で問題なければ購入する
+
 ## 機能一覧
-  ### ユーザー管理機能  
-    新規登録の際にはメール、パスワード、名前、電話番号、アドレスを登録させる  
-    ログインの際はメールとパスワードを入力してログインする。  
-  ### 買い手側によるチャーター便新規発注機能  
-    ヘッダーの「チャーターをご要望の方」をクリックするとチャーター便新規発注画面へ遷移する。  
-    - チャーター便手配時には  
-    - 出発、到着場所の自治体を入力させる  
-    - 荷物の大きさとなる才数を入力させる
-    - 到着希望日を入力させる
-    - 希望価格を入力させる
-    - 到着する場所の住所を入力させる
-    - 荷受け人の電話番号を入力させる
-
-  ### 売り手側によるチャーター便オークション機能
-    トップページの左側にチャーター便一覧を表示しているのでチャーター便ごとにクリックすると、トップページの右側に価格一覧を表示することができる。
-    希望売却価格を入力しクリックすると価格一覧に上から安い順に価格が表示される。  
-  ### チャーター便詳細機能  
-    価格一覧の上のチャーター便のリンクをクリックするとチャーター便詳細ページへ遷移する。
-    - 出発地ー到着地が表示されている
-    - 到着地周辺のGoogleマップが表示されている
-    - 購入者のみ削除ができるボタンがある
-    - 住所が表示されている
-    - 希望価格が表示されている
-    - 才数が表示されている
-  ### チャーター便購入機能
-    トップページの右側の価格一覧の価格のリンクをクリックするとチャーター便購入どうでしょうかベージへ遷移できる。  
-    ここでは価格提示した売り手側は削除と編集ができ、購入側は購入ボタンが表示されている。  
-    購入ボタンを押すとクレジット情報を入力させるページへ遷移する。
-    削除するとトップページの価格が消える。  
-    また購入が完了すると、トップページ左のチャーター便の表示が消える。
-
+  ユーザー管理機能
+  チャーター便発注機能(チャーター便削除可能、編集可能)
+  チャーター便入札機能(価格削除可能、編集不可)
+  ユーザー確認ページ
+  チャーター便購入機能
+  チャーター便検索機能
 ## 環境・使用技術  
   ### フロントエンド  
-    - HTML, CSS, JavaScript
+    - HTML, CSS, JavaScript, jQuery
   ### バックエンド
-    - Ruby
-    - Rails
+    - Ruby 2.6.5
+    - Rails 6.0.3
 
   ### 開発環境
     -MySQL2
   ### 本番環境
-    
+    AWS(EC2, Route53)
+    Mariadb
+    Nginx
+    Capistrano
 
-## テスト
+  ### テスト
+    Rspec
 
-## インフラ構成図
+  ### その他使用したもの
+    GitHub(Brunch, Issueで進捗の管理)
+    外部API(Google Map API, Geocoding API)
+
+  ### 実装予定
+    非同期通信(入札時のページ読み込みをなくす)
+    購入確認バナー(購入時に警告を表示させる)
+    ユーザー詳細ページに購入一覧を表示させる
 
 ## ER図
-<img width="589" alt="eade7f0ee052718f2ea9c0461b9c426b" src="https://user-images.githubusercontent.com/68809067/98218277-ee5fb980-1f8e-11eb-8ff5-9362334339b6.png">
+<img src="er図.png" alt="attach:cat" title="attach:cat" width="200" height="200">
 
-## テーブル一覧
-
-### userテーブル
-| Column             | Type       | Options          |
-| ------------------ | ---------- | ---------------- |
-| username           | string     | null :false      |
-| email              | string     | null :false      |
-| password           | string     | null :false      |
-| encrypted_password | string     | null :false      |
-| phone_number       | integer    | null :false      |
-| prefecture_address | string     | null :false      |
-| city_address       | string     | null :false      |
-| house_number       | string     | null :false      |
-
-#### アソシエーション
-user has_many :orders   
-user has_many :charters   
-user has_many :sellOrders  
-
-
-### charterテーブル
-| Column             | Type       | Options          |
-| ------------------ | ---------- | ---------------- |
-| departure          | string     | null :false      |
-| arrive             | string     | null :false      |
-| size               | integer    | null :false      |
-| delivery_date      | date       | null :false      |
-| buy_price          | integer    | null :false      |
-| prefecture_id      | integer    | null :false      |
-| city               | string     | null :false      |
-| charter_address    | string     | null :false      |
-| build_name         | string     | null :false      |
-| tell_number        | integer    | null :false      |
-
-#### アソシエーション
-charter belongs_to :user  
-charter has_one :order  
-charter has_many :sellOrders  
-
-
-### orderテーブル
-| Column             | Type       | Options          |
-| ------------------ | ---------- | ---------------- |
-| departure          | string     | null :false      |
-| arrive             | string     | null :false      |
-
-#### アソシエーション
-order belongs_to :user  
-order belongs_to :charter  
-order belongs_to :sellOrder  
-
-
-### sellOrderテーブル
-| Column             | Type       | Options          |
-| ------------------ | ---------- | ---------------- |
-| sell_price         | integer    | null :false      |
-
-#### アソシエーション
-sellOrder has_many :users  
-sellOrder has_one :order  
-sellOrder belongs_to :charter  
-
-
-### sellOrder_userテーブル(中間テーブル)
-
-#### アソシエーション
-belongs_to :user  
-belongs_to :sellOrder  
