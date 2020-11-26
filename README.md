@@ -61,5 +61,5 @@
     ユーザー詳細ページに購入一覧を表示させる
 
 ## ER図
-<img src="er図.png" alt="attach:cat" title="attach:cat" width="200" height="200">
+<img width="590" alt="er図" src="https://user-images.githubusercontent.com/68809067/100305551-a60f4680-2fe4-11eb-9fa7-ed2dd9935cfe.png">
 
