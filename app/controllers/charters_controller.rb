@@ -43,8 +43,7 @@ class ChartersController < ApplicationController
   end
 
   def search
-    @charters = Charter.search(params[:keyword])
-    
+    @charters = Charter.search(params[:keyword]) 
   end
 
   private
