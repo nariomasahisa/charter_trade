@@ -1,6 +1,7 @@
 class ChartersController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :search]
   before_action :set_charter, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, only:[:edit, :destroy]
   
   def index
     @charters = Charter.all
@@ -21,7 +22,7 @@ class ChartersController < ApplicationController
 
   def show
     @sell = Sell.new
-    @sells = @charter.sells.order(sell: :asc).first(1)
+    @sells = @charter.sells.order(sell: :asc).order(created_at: :asc).first(1)
     @purchase = Purchase.new
   end
   
@@ -53,5 +54,12 @@ class ChartersController < ApplicationController
 
   def set_charter
     @charter = Charter.find(params[:id])
+  end
+
+  def move_to_index
+    @charter = Charter.find(params[:id])
+    unless current_user.id == @charter.user_id
+      redirect_to root_path
+    end
   end
 end
