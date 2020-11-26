@@ -7,9 +7,10 @@
 ## URL
   http://www.charter-trader.com/
 ## テスト用アカウント
-  ユーザー1：tanaka@gmail.com  Tanaka111  
-  ユーザー2：nakata@gmail.com  
-           Nakata111  
+  - ユーザー1：tanaka@gmail.com  
+  - パスワード：Tanaka111  
+  - ユーザー2：nakata@gmail.com  
+  - パスワード：Nakata111  
 ## 制作背景
   前職でキッチンやユニットバスを現場に手配する仕事に携わっていました。
   場所的に九州の辺境の場所だったりすることもあり、そこまでチャーターを手配してくれる業者が少な買ったこと、
