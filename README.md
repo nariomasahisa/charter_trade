@@ -1,5 +1,5 @@
 ## アプリケーション名
- # Chater Trader
+ ### Chater Trader
 
 ## 概要
   チャーター便のオークションサイト
