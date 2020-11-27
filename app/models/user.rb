@@ -25,4 +25,17 @@ class User < ApplicationRecord
   has_many :charters
   has_many :sells
   has_many :purchases
+
+  def self.guest
+    find_or_create_by!(
+      username: 'ゲスト',
+      email: 'guest@example.com',
+      phone_number: '09011223456',
+      prefecture_address: '東京都',
+      city_address: '中央区',
+      house_number: '日本橋',
+      ) do |user|
+      user.password = SecureRandom.alphanumeric(8)
+    end
+  end
 end

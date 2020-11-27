@@ -9,6 +9,7 @@
         <li><%= link_to current_user.username, user_path(current_user), class: "log-in-user" %></li> 
         <li><%= link_to 'ログアウト', destroy_user_session_path, class: "log-out", method: :delete %></li>
       <% else %>
+        <li><%= link_to '閲覧用', users_guest_sign_in_path, class: "log-in", method: :post %></li>
         <li><%= link_to 'ログイン', new_user_session_path, class: "log-in"%></li>
         <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up"%></li>
       <% end %>
