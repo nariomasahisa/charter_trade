@@ -7,6 +7,7 @@
 ## URL
   http://www.charter-trader.com/
 ## テスト用アカウント
+  - ゲストログイン機能があります
   - ユーザー1：tanaka@gmail.com  
   - パスワード：Tanaka111  
   - ユーザー2：nakata@gmail.com  
