@@ -359,6 +359,20 @@ li {
 }
 
 /* -----charters/show---------- */
+#mask {
+  background: rgb(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+#mask.hidden {
+  display: none;
+}
+
+
 .charter_show_header {
   height: 100px;
   color: #fff;
@@ -489,6 +503,28 @@ li {
   height: 400px;
   width: 100%;
   margin-left: 60px;
+}
+#modal {
+  background-color: #ffffff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform 0.4s;
+  z-index: 2;
+}
+#modal.hidden {
+  display:none;
+}
+#bid {
+  margin-top: 50px;
+}
+#bid:hover {
+  cursor: pointer;
 }
 
 

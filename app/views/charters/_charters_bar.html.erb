@@ -15,7 +15,7 @@
               <div class='charter-number'>
                 <%= "チャーター番号:#{charter.id}"%>
               </div>
-              <%= link_to "#{charter.departure}→#{charter.arrive}", charter_path(charter), class:"charter-name"%>
+              <%= link_to "#{charter.departure}→#{charter.arrive}", charter_path(charter), class:"charter-name", data: {"turbolinks" => false}%>
             </div>
             <div class='charter-user'>
               <%= link_to "発注者:#{charter.user.username}さん", user_path(charter.user)%>

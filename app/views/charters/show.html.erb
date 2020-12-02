@@ -1,5 +1,5 @@
 <%= render "shared/header" %>
-
+<div id='mask' class='hidden'></div>
 <div class="charter_show_header">
   <div class="charter_show_title">チャーター便詳細</div>
 </div>
@@ -64,15 +64,20 @@
     <div class='charter-show-right-lower'>
     <% if user_signed_in? %>
       <% if current_user.id != @charter.user_id %>
-      <div class="price-form">
+      <section id='modal' class='price-form hidden'>
         <%= form_with(model: [@charter, @sell], local: true, id: "price-form") do |form| %>
-        <%= form.text_area :sell, placeholder: "価格を入力する", class:"price-input", id: "content"%>
-        <%= form.submit "SEND", id: "price-submit-btn" ,class:"price-submit" %>
+        <%= form.text_area :sell, placeholder: "価格を入力する", class:"price-input hidden", id: "content"%>
+        <%= form.submit "SEND", id: "price-submit-btn" ,class:"price-submit hidden" %>
         <% end %>
-      </div>
+      </section>
       <% end %> 
     <% else %>
       <strong><p>※ 価格の提示には新規登録/ログインが必要です ※</p></strong>
+    <% end %>
+    <% if user_signed_in? %>
+      <% if current_user.id != @charter.user_id %>
+        <div id='bid'>入札ボタン</div>
+      <% end %>
     <% end %>
     </div>
 
