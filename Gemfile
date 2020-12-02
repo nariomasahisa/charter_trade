@@ -67,3 +67,4 @@ group :production do
   gem 'unicorn', '5.4.1'
 end
 gem 'dotenv-rails'
+gem 'sprockets-es6'
