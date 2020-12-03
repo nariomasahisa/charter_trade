@@ -131,10 +131,12 @@
 /* user_show.html */
 .user-show {
   width: 100vw;
-  height: calc(100vh - 20vh);
+  height: 1000px;
+  display: flex;
 }
 .user-show-detail {
-  margin: auto;
+  width: 50%;
+  margin: 30px;
   font-size: 1.5em;
   font-family: "hiragino kaku gothic stdn";
 }
@@ -144,4 +146,42 @@
 }
 .user-name {
   padding: 0 0 20px 40px;
+}
+
+.user-show-purchase {
+  width: 50%;
+  background-color: lightblue;
+  padding: 30px;
+  overflow: scroll;
+}
+.purchase-lists {
+  padding: 20px;
+}
+.user-show-purchase-list {
+  text-align: center;
+  font-size: 25px;
+}
+
+@media (max-width: 599px) {
+  .user-show {
+    width: 100vw;
+    height: calc(100vh - 20vh);
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+  .user-show-detail {
+    width: 100%;
+    height: 700px;
+    margin: 5px;
+    font-size: 1.5em;
+    font-family: "hiragino kaku gothic stdn";
+    overflow: scroll;
+  }
+  .user-show-purchase {
+    width: 100%;
+    height: 300px;
+    padding: 30px;
+    overflow: scroll;
+  }
 }

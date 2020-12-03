@@ -10,6 +10,7 @@
     <p></p>
   </div>
   <div class="user-show-purchase">
+  <% if current_user.id == @user.id %>
     <div class='user-show-purchase-list'>
       <%= "#{current_user.username}さんのチャーター購入履歴"%>
     </div>
@@ -20,6 +21,8 @@
         <% end %>
       </div>
     <% end %>
+  <% end %>
+
   </div>
 </div>
 <%= render "shared/footer" %>
