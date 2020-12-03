@@ -519,7 +519,7 @@ li {
   z-index: 2;
 }
 #modal.hidden {
-  display:none;
+  transform: translate(0, -500px);
 }
 #bid {
   margin-top: 50px;

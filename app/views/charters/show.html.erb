@@ -45,31 +45,28 @@
           <span>(税込)</span>
           <div class='price-action'>
           <% if user_signed_in? %>
-          <% if @charter.user_id != current_user.id && sell.user_id == current_user.id %>
-          <%= link_to "削除", "/charters/#{@charter.id}/sells/#{sell.id}", method: :delete ,id: "price-action-btn", class:"price-action-btn" %>
-          <% elsif @charter.user_id == current_user.id %>
-          <%= form_with(model: [@charter, @purchase], id: 'charge-form', class: 'purchase-form-wrap',local: true) do |f| %>
-            <%= f.submit "購入" ,class:"purchase-btn" %>      
-          <% end %>
-          <% else %>
-
-
-          <% end %>
+            <% if @charter.user_id != current_user.id && sell.user_id == current_user.id %>
+              <%= link_to "削除", "/charters/#{@charter.id}/sells/#{sell.id}", method: :delete ,id: "price-action-btn", class:"price-action-btn" %>
+            <% elsif @charter.user_id == current_user.id %>
+              <%= form_with(model: [@charter, @purchase], id: 'charge-form', class: 'purchase-form-wrap',local: true) do |f| %>
+                <%= f.submit "購入" ,class:"purchase-btn" %>      
+              <% end %>
+            <% end %>
           <% end %>
           </div>
         </li>
+      <% end %> 
     </ul>
-    <% end %>  
     </div>
     <div class='charter-show-right-lower'>
     <% if user_signed_in? %>
       <% if current_user.id != @charter.user_id %>
-      <section id='modal' class='price-form hidden'>
-        <%= form_with(model: [@charter, @sell], local: true, id: "price-form") do |form| %>
-        <%= form.text_area :sell, placeholder: "価格を入力する", class:"price-input hidden", id: "content"%>
-        <%= form.submit "SEND", id: "price-submit-btn" ,class:"price-submit hidden" %>
-        <% end %>
-      </section>
+        <section id='modal' class='price-form hidden'>
+          <%= form_with(model: [@charter, @sell], local: true, id: "price-form") do |form| %>
+            <%= form.text_area :sell, placeholder: "価格を入力する", class:"price-input hidden", id: "content"%>
+            <%= form.submit "SEND", id: "price-submit-btn" ,class:"price-submit hidden" %>
+          <% end %>
+        </section>
       <% end %> 
     <% else %>
       <strong><p>※ 価格の提示には新規登録/ログインが必要です ※</p></strong>
