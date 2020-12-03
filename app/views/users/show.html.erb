@@ -1,13 +1,25 @@
 <%= render "shared/header" %>
 <div class="user-show">
   <div class="user-show-detail">
-  <div class='user-title'>ユーザー名</div>
-  <div class='user-name'><%= @user.username %>さん</div>
-  <div class='user-title'>住所</div>
-  <div class='user-name'><%= @user.city_address %></div>
-  <div class='user-title'>連絡先</div>
-  <div class='user-name'><%= @user.email %></div>
-  <p></p>
+    <div class='user-title'>ユーザー名</div>
+    <div class='user-name'><%= @user.username %>さん</div>
+    <div class='user-title'>住所</div>
+    <div class='user-name'><%= @user.city_address %></div>
+    <div class='user-title'>連絡先</div>
+    <div class='user-name'><%= @user.email %></div>
+    <p></p>
+  </div>
+  <div class="user-show-purchase">
+    <div class='user-show-purchase-list'>
+      <%= "#{current_user.username}さんのチャーター購入履歴"%>
+    </div>
+    <% @purchases.each do |purchase| %>
+      <div class="purchase-lists">
+        <% if current_user.id == purchase.user_id%>
+        <%= "#{purchase.charter.departure}→#{purchase.charter.arrive}"%>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
 <%= render "shared/footer" %>
