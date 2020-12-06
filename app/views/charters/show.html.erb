@@ -23,15 +23,17 @@
       <div class="show-name">チャーター便才数:</div>
       <div class="charter-value"><%= "#{@charter.size}才"%></div>
     </div>
-    <% if user_signed_in? && @charter.user_id == current_user.id %>
-    <div class="charter-action">
-      <div class="charter-edit-btn">
-        <%= link_to "編集する", edit_charter_path(@charter) %>
+    <% if @purchase == 0%>
+      <% if user_signed_in? && @charter.user_id == current_user.id %>
+      <div class="charter-action">
+        <div class="charter-edit-btn">
+          <%= link_to "編集する", edit_charter_path(@charter) %>
+        </div>
+        <div class="charter-delete-btn">
+          <%= link_to "削除", charter_path(@charter), method: :delete %>
+        </div>
       </div>
-      <div class="charter-delete-btn">
-        <%= link_to "削除", charter_path(@charter), method: :delete %>
-      </div>
-    </div>
+      <% end %>
     <% end %>
   </div>
 
@@ -47,7 +49,7 @@
           <% if user_signed_in? %>
             <% if @charter.user_id != current_user.id && sell.user_id == current_user.id %>
               <%= link_to "削除", "/charters/#{@charter.id}/sells/#{sell.id}", method: :delete ,id: "price-action-btn", class:"price-action-btn" %>
-            <% elsif @charter.user_id == current_user.id %>
+            <% elsif (@charter.user_id == current_user.id) && @purchase == 0 %>
               <%= form_with(model: [@charter, @purchase], id: 'charge-form', class: 'purchase-form-wrap',local: true) do |f| %>
                 <%= f.submit "購入" ,class:"purchase-btn" %>      
               <% end %>

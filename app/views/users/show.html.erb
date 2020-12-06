@@ -18,7 +18,7 @@
       <% @purchases.each do |purchase| %>
         <div class="purchase-lists">
           <% if current_user.id == purchase.user_id%>
-          <%= "#{purchase.charter.departure}→#{purchase.charter.arrive}"%>
+          <%= link_to "#{purchase.charter.departure}→#{purchase.charter.arrive}", charter_path(purchase.charter) %>
           <% end %>
         </div>
       <% end %>
