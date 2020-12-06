@@ -12,7 +12,8 @@
   display: flex;
 }
 .app-name {
-  font-size: 3em;
+  height: 80px;
+  width: auto;
 
 }
 

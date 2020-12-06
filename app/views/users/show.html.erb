@@ -10,16 +10,18 @@
     <p></p>
   </div>
   <div class="user-show-purchase">
-  <% if current_user.id == @user.id %>
-    <div class='user-show-purchase-list'>
-      <%= "#{current_user.username}さんのチャーター購入履歴"%>
-    </div>
-    <% @purchases.each do |purchase| %>
-      <div class="purchase-lists">
-        <% if current_user.id == purchase.user_id%>
-        <%= "#{purchase.charter.departure}→#{purchase.charter.arrive}"%>
-        <% end %>
+  <% if user_signed_in? %>
+    <% if current_user.id == @user.id %>
+      <div class='user-show-purchase-list'>
+        <%= "#{current_user.username}さんのチャーター購入履歴"%>
       </div>
+      <% @purchases.each do |purchase| %>
+        <div class="purchase-lists">
+          <% if current_user.id == purchase.user_id%>
+          <%= "#{purchase.charter.departure}→#{purchase.charter.arrive}"%>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
   <% end %>
 
