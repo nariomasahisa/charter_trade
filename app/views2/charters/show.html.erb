@@ -1,0 +1,93 @@
+<%= render "shared/header" %>
+<div id='mask' class='hidden'></div>
+<div class="charter_show_header">
+  <div class="charter_show_title">チャーター便詳細</div>
+</div>
+
+<div class='charter_show'>
+
+  <div class="left-content">
+    <div class="charter-detail">
+      <div class="show-name">配達先:</div>
+      <div class="charter-value"><%= "#{@charter.departure}→#{@charter.arrive}" %></div>
+    </div>
+    <div class="charter-detail">
+      <div class="show-name">発注者希望価格:</div>
+      <div class="charter-value"><%= "#{@charter.buy_price}円"%></div>
+    </div>
+    <div class="charter-detail">
+      <div class="show-name">発送先住所:</div>
+      <div id='address' class="charter-value"><%= @charter.city + @charter.charter_address + @charter.build_name %></div>
+    </div>
+    <div class="charter-detail">
+      <div class="show-name">チャーター便才数:</div>
+      <div class="charter-value"><%= "#{@charter.size}才"%></div>
+    </div>
+    <% if @purchase == 0%>
+      <% if user_signed_in? && @charter.user_id == current_user.id %>
+      <div class="charter-action">
+        <div class="charter-edit-btn">
+          <%= link_to "編集する", edit_charter_path(@charter) %>
+        </div>
+        <div class="charter-delete-btn">
+          <%= link_to "削除", charter_path(@charter), method: :delete %>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class='center-content'>
+    <div class='charter-show-right-upper'>
+    <div class="now-price">ただいまの最安値</div>
+    <ul class="price-row">  
+      <% @sells.each do |sell|%>
+        <li class="price-lists">
+          <%= link_to "#{sell.sell}円", "/users/#{sell.user_id}", id: "price", class: "price-list" %>
+          <span>(税込)</span>
+          <div class='price-action'>
+          <% if user_signed_in? %>
+            <% if @charter.user_id != current_user.id && sell.user_id == current_user.id %>
+              <%= link_to "削除", "/charters/#{@charter.id}/sells/#{sell.id}", method: :delete ,id: "price-action-btn", class:"price-action-btn" %>
+            <% elsif (@charter.user_id == current_user.id) && @purchase == 0 %>
+              <%= form_with(model: [@charter, @purchase], id: 'charge-form', class: 'purchase-form-wrap',local: true) do |f| %>
+                <%= f.submit "購入" ,class:"purchase-btn" %>      
+              <% end %>
+            <% end %>
+          <% end %> 
+          </div>
+        </li>
+      <% end %> 
+    </ul>
+    </div>
+    <div class='charter-show-right-lower'>
+    <% if user_signed_in? %>
+      <% if current_user.id != @charter.user_id %>
+        <section id='modal' class='price-form hidden'>
+          <%= form_with(model: [@charter, @sell], local: true, id: "price-form") do |form| %>
+            <%= form.text_area :sell, placeholder: "価格を入力する", class:"price-input hidden", id: "content"%>
+            <%= form.submit "SEND", id: "price-submit-btn" ,class:"price-submit hidden" %>
+          <% end %>
+        </section>
+      <% end %> 
+    <% else %>
+      <strong><p>※ 価格の提示には新規登録/ログインが必要です ※</p></strong>
+    <% end %>
+    <% if user_signed_in? %>
+      <% if current_user.id != @charter.user_id %>
+        <div id='bid'>入札ボタン</div>
+      <% end %>
+    <% end %>
+    </div>
+
+  </div>
+
+  <div class="right-content">
+    <div id='gmap'class="charter-map">
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
+
+

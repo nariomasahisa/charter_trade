@@ -1,0 +1,9 @@
+<div id= '1' class='charter_bar'>
+  <div class="charter_header">
+    <div class="charter_header_name">チャーター便検索</div>
+    <%= form_with(url: search_charters_path, local: true, method: :get, class: "search-form") do |form| %>
+      <%= form.text_field :keyword, placeholder: "到着場所で検索する", class: "search-input" %>
+      <%= form.submit "検索", class: "search-btn" %>
+    <% end %>
+  </div>
+</div>

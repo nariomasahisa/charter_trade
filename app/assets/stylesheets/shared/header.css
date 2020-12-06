@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 .top-page-header {
-  background-color: cornsilk;
+  background-color: rgb(243, 226, 216);
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -14,7 +14,7 @@
 .app-name {
   height: 80px;
   width: auto;
-
+  opacity: 0.9;
 }
 
 
@@ -51,7 +51,6 @@
 @media (max-width: 1000px) {
 
   .top-page-header {
-    background-color: cornsilk;
     height: 80px;
     display: flex;
     justify-content: space-between;

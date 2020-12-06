@@ -51,9 +51,9 @@ li {
   margin: 20px;
 }
 .top-contents {
-  margin: 10px;
+  margin: 100px auto;
 }
-.title_message_1, .title_message_2, .main_message1, .main_message3 {
+.title_message_1, .title_message_2{
   font-family: 'Hiragino Kaku Gothic StdN';
   color: #FFF;  
 }
@@ -62,6 +62,8 @@ li {
 }
 .main_message1, .main_message3 {
   font-size: 2vw;
+  font-family: 'Hiragino Kaku Gothic StdN';
+  text-align: center;
 }
 .scroll-btn {
   width: 100px;
@@ -86,8 +88,7 @@ li {
     margin: 8px;
   }
   .title_message_1, .title_message_2, .main_message1, .main_message3 {
-    font-family: 'Hiragino Kaku Gothic StdN';
-    color: #FFF;  
+    font-family: 'Hiragino Kaku Gothic StdN'; 
   }
 }
 
@@ -146,9 +147,8 @@ li {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
   border-bottom: none;
 }
-.charter_main {
-  height: 700px;
-  overflow: scroll;
+.charter-message { 
+  height: calc(100vh - 30vh - 160px);
 }
 .charter_lists {
   display: flex;
