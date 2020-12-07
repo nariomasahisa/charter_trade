@@ -30,7 +30,7 @@
   justify-content: left;
 }
 
-.new-charter, .log-in, .sign-up, .log-out, .log-in-user {
+.log-in, .sign-up, .log-out, .log-in-user {
   font-family: "hiragino kaku gothic stdn";
   color: black;
   background-color: white;
@@ -41,10 +41,11 @@
   margin: 10px;
 
 }
-.new-charter:hover, .log-in:hover, .sign-up:hover, .log-out:hover, .log-in-user:hover {
+.log-in:hover, .sign-up:hover, .log-out:hover, .log-in-user:hover {
   color: white;
   background-color: black;
-  border: 3px double white;}
+  border: 3px double white;
+}
 
 
 

@@ -1,12 +1,19 @@
 <div class='charter-image'>
-  <%= image_tag 'load.jpg', class:'image'%>
+  <%= image_tag '1493950_l.jpg', class:'image'%>
+  <div class='main-title'>Charter Trader</div>
   <div class='top-messages'>
-    <div class='top-title'>
-      <div class='title_message_1'>チャーター便を</div>
-      <div class='title_message_2'>お求めやすく</div>
-    </div>
+    <div class='title_message_1'>チャーター便を</div>
+    <div class='title_message_1'>お求めやすく</div>
   </div>
-  <div class='scroll-btn'>
-  <a href="#1"><p>チャーター</p><p>検索へ</p></a>
+  <div class='buttons'>
+    <div class='button scroll-btn'>
+      <a href="#1"><p>チャーター</p><p>検索へ</p></a>
+    </div>
+    <div class='button order-btn'>
+      <%= link_to 'チャーターをご要望の方', new_charter_path, class: "new-charter" %>
+    </div>
+    <div class='button scroll-btn_2'>
+      <a href="#2">Charter Traderとは</a>
+    </div>
   </div>
 </div>
