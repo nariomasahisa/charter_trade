@@ -1,0 +1,99 @@
+/* ------charter/new-edit------- */
+.charter-new-form {
+  width: 75%;
+  height: calc(100vh - 20vh);
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.charter-new-form__errors {
+  margin: 20px 0;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  text-align: center;
+}
+.charter-new-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.charter-new-detail, .charter-new-address {
+  width: 50%;
+}
+
+.charter-new-form__label {
+  display: block;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+.charter-new-form__input {
+  float: left;
+  width: 100%;
+  line-height: 30px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+.charter-new-form__action-btn {
+  display: inline-block;
+  padding: 6px 20px;
+  color: #fff;
+  background-color: #38aef0;
+  border: 0;
+}
+.charter-new-form__field {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.charter-new-form__field:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.charter-new-form__field--left {
+  width: 75%;
+  padding-right: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.charter-new-form__field--right {
+  float: left;
+  width: 100%;
+}
+.charter-new-form__label_hash {
+  float: right;
+  line-height: 30px;
+  font-weight: bold;
+}
+.charter-form__action-btn {
+  font-family: "Hiragino Kaku Gothic StdN";
+  color: white;
+  background-color: lightskyblue;
+  border: 3px double white;
+  padding: 0 20px;
+  height: 50px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.charter-form__action-btn:hover {
+  color: white;
+  background-color: red;
+  border: 3px double white;
+}
+
+@media (max-width: 1000px) {
+  .charter-new-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
