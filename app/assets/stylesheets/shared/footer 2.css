@@ -1,0 +1,15 @@
+
+footer {
+  color: #fff;
+  text-align: center;
+  height: 80px;
+  background: #252726;
+}
+.copy-light {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+}

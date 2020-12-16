@@ -20,4 +20,4 @@ const modal = () => {
     mask.classList.add('hidden');
   })
 };
-window.addEventListener('load', modal);
+window.addEventListener("turbolinks:load", modal);
